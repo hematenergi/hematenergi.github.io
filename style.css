@@ -1,10 +1,15 @@
+.header {
+  height: 90px;
+  background-color: darkslategray;
+  color: #fff;
+}
 .foto img {
   width: 100px;
   height: auto;
   border: 2px solid black;
 }
 .container {
-  background-color: aquamarine;
+  background-color: lightgray;
 }
 .biodata {
 }
