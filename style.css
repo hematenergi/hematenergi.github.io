@@ -3,6 +3,10 @@
   background-color: darkslategray;
   color: #fff;
 }
+.header li {
+  float: left;
+  list-style: none;
+}
 .foto img {
   width: 100px;
   height: auto;
