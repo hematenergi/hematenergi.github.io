@@ -1,21 +1,122 @@
+/* default page setting */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: black;
+}
+/* page styling */
+.mainContainer {
+  background-color: white;
+  box-shadow: 0 0 80px 5px lightskyblue;
+  padding: 20px 36px 20px 36px;
+  margin: 40px 40px;
+}
+/* header setting */
 .header {
-  height: 90px;
-  background-color: darkslategray;
-  color: #fff;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
 }
-.header li {
-  float: left;
-  list-style: none;
+.logoname,
+.logo {
+  display: flex;
+  flex: 1;
+  font-style: oblique;
+  /* align-items: center; */
+  /* background-color: lightpink; */
 }
-.foto img {
-  width: 100px;
-  height: auto;
-  border: 2px solid black;
+.navigation {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  /* background-color: lightblue; */
 }
-.container {
-  background-color: lightgray;
+.navigation a {
+  color: Black;
+  text-decoration: none;
+  font-weight: bold;
 }
-.biodata {
+.navigation a:hover {
+  color: Black;
+
+  /* background-color: antiquewhite; */
+  text-align: center;
+  font-weight: initial;
 }
-.form {
+/* content setting */
+.content {
+  display: flex;
+  margin-top: 30px;
+}
+.left {
+  /* background-color: coral; */
+  display: flex;
+  flex: 1;
+  background-image: url(foto.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: 440px;
+  background-size: auto;
+}
+.right {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+/* button */
+.message {
+  padding: 15px 40px;
+  text-align: center;
+  width: 30%;
+  color: white;
+  background-color: #262b28;
+  cursor: pointer;
+  box-shadow: 0 7px #000000;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+/* contact form */
+.contact-form {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+/* Add CSS for <input> and <textarea> tags */
+input,
+textarea {
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #dee7ec;
+}
+
+/* Add CSS for contact-submit */
+.contact-submit {
+  background-color: #dee7ec;
+  color: #889eab;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
 }
