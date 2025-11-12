@@ -2,6 +2,7 @@
   "registries": {
     "@cult-ui": "https://cult-ui.com/r/{name}.json",
     "@shadcn": "https://ui.shadcn.com/r/{name}.json",
+    "@magicui": "https://magicui.design/r/{name}.json",
     "@internal": {
       "url": "https://internal.company.com/{name}.json",
       "headers": {
