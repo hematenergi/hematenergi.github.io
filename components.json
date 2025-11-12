@@ -1,0 +1,11 @@
+{
+  "registries": {
+    "@cult-ui": "https://cult-ui.com/r/{name}.json",
+    "@internal": {
+      "url": "https://internal.company.com/{name}.json",
+      "headers": {
+        "Authorization": "Bearer ${REGISTRY_TOKEN}"
+      }
+    }
+  }
+}
