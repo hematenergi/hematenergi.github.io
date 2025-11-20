@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20 px-4 sm:px-6"
     >
       {/* Retro Grid Background */}
       <RetroGrid
@@ -30,29 +30,29 @@ export default function Hero() {
         darkLineColor="#60a5fa"
       />
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto w-full">
         <BlurFade delay={0.2} duration={0.6}>
-          <div className="text-center space-y-4 mb-24">
+          <div className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-16 md:mb-24">
             {/* Greeting */}
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-primary font-medium">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6">
+              <p className="text-lg sm:text-xl md:text-2xl text-primary font-medium">
                 Hi, I'm
               </p>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[1.1]">
                 Dany Arkham
               </h1>
             </div>
 
             {/* Morphing Job Title */}
-            <div className="h-24 md:h-28 flex items-center justify-center">
+            <div className="h-16 sm:h-20 md:h-24 lg:h-28 flex items-center justify-center">
               <MorphingText
                 texts={JOB_TITLES}
-                className="text-3xl md:text-5xl font-bold"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
               />
             </div>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Building high-performance, gorgeous applications across web and
               mobile platforms. Specialized in{" "}
               <span className="font-semibold text-foreground">React</span>,{" "}
