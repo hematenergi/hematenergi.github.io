@@ -8,12 +8,7 @@ import { BlurFade } from "@/components/ui/blur-fade"
 import { PERSONAL_INFO } from "@/lib/constants"
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
 
-const JOB_TITLES = [
-  "Front-End",
-  "Mobile Developer",
-  "Web3 Developer",
-  "UX Enthusiast",
-]
+const JOB_TITLES = ["Front-End", "Mobile Dev", "Web3 Dev", "UX Geeks"]
 
 export default function Hero() {
   return (
@@ -44,10 +39,10 @@ export default function Hero() {
             </div>
 
             {/* Morphing Job Title */}
-            <div className="h-16 sm:h-20 md:h-24 lg:h-28 flex items-center justify-center">
+            <div className="h-20 sm:h-24 md:h-28 lg:h-32 flex items-center justify-center px-4">
               <MorphingText
                 texts={JOB_TITLES}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap"
               />
             </div>
 

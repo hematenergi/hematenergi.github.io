@@ -58,10 +58,16 @@
   }
   html {
     @apply scroll-smooth;
-    scroll-snap-type: y proximity;
   }
-  section {
-    scroll-snap-align: start;
+
+  /* Scroll snap only on desktop (md and above) */
+  @media (min-width: 768px) {
+    html {
+      scroll-snap-type: y proximity;
+    }
+    section {
+      scroll-snap-align: start;
+    }
   }
 }
 
