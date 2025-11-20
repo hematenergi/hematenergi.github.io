@@ -13,7 +13,9 @@ export default function Highlights() {
       className="min-h-screen flex flex-col justify-center py-12 scroll-mt-20"
       id="highlights"
     >
-      <h2 className="text-3xl font-bold mb-6">Highlights</h2>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        Highlights
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {HIGHLIGHTS.map((highlight) => {
           const Icon = Icons[

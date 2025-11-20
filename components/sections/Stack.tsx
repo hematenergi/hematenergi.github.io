@@ -16,10 +16,10 @@ const TechBadge = ({ name }: { name: string }) => {
 }
 
 export default function Stack() {
-  // Split tech stack into multiple rows for visual variety
-  const firstRow = TECH_STACK.slice(0, 4)
-  const secondRow = TECH_STACK.slice(4, 8)
-  const thirdRow = TECH_STACK.slice(8)
+  // Better distribution: 6-5-5 for smoother marquee
+  const firstRow = TECH_STACK.slice(0, 6)
+  const secondRow = TECH_STACK.slice(6, 11)
+  const thirdRow = TECH_STACK.slice(11)
 
   return (
     <section
@@ -28,7 +28,9 @@ export default function Stack() {
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tech Stack</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Tech Stack
+          </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Technologies I use to build modern, scalable, and performant
             applications

@@ -17,7 +17,10 @@ const JOB_TITLES = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-20"
+    >
       {/* Retro Grid Background */}
       <RetroGrid
         angle={65}
@@ -27,11 +30,11 @@ export default function Hero() {
         darkLineColor="#60a5fa"
       />
 
-      <div className="max-w-5xl mx-autorounded-2xl">
+      <div className="max-w-5xl mx-auto">
         <BlurFade delay={0.2} duration={0.6}>
           <div className="text-center space-y-4 mb-24">
             {/* Greeting */}
-            <div className="space-y-6 mt-16">
+            <div className="space-y-6">
               <p className="text-xl md:text-2xl text-primary font-medium">
                 Hi, I'm
               </p>
@@ -50,15 +53,17 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Building high-performance, georgeous applications across web and
+              Building high-performance, gorgeous applications across web and
               mobile platforms. Specialized in{" "}
               <span className="font-semibold text-foreground">React</span>,{" "}
               <span className="font-semibold text-foreground">TypeScript</span>,
-              and <span className="font-semibold text-foreground">Express</span>{" "}
-              technologies with a 4 years building{" "}
+              and{" "}
+              <span className="font-semibold text-foreground">WebSocket</span>{" "}
+              technologies with{" "}
               <span className="font-semibold text-foreground">
-                thoughtful, user-focused applications
-              </span>
+                4+ years of experience
+              </span>{" "}
+              building thoughtful, user-focused applications.
             </p>
           </div>
 
@@ -66,7 +71,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <LinkButton
-                href="#projects"
+                href="#work"
                 className="px-8 py-3 font-semibold sm:w-auto"
               >
                 View My Work

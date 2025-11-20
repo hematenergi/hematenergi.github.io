@@ -4,28 +4,29 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card"
+import { Smartphone, Palette, Link2, GraduationCap } from "lucide-react"
 
 export default function Expertise() {
   const services = [
     {
       title: "Frontend & Mobile Development",
       description: "React, React Native, Expo, Flutter",
-      icon: "📱",
+      icon: Smartphone,
     },
     {
       title: "UI/UX & Product Strategy",
       description: "User-centered design and product development",
-      icon: "🎨",
+      icon: Palette,
     },
     {
       title: "Web3 & Crypto Integrations",
       description: "Solana, Phantom, Bybit API",
-      icon: "🔗",
+      icon: Link2,
     },
     {
       title: "Teaching & Mentoring",
       description: "Helping young devs build real projects",
-      icon: "👨‍🏫",
+      icon: GraduationCap,
     },
   ]
 
@@ -34,7 +35,9 @@ export default function Expertise() {
       className="min-h-screen flex flex-col justify-center py-12 scroll-mt-20"
       id="expertise"
     >
-      <h2 className="text-3xl font-bold mb-6">What I Do</h2>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        What I Do
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service) => (
           <Card
@@ -43,7 +46,7 @@ export default function Expertise() {
           >
             <CardHeader>
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl">{service.icon}</span>
+                <service.icon className="w-8 h-8 text-primary flex-shrink-0" />
                 <CardTitle className="text-lg group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>

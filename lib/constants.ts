@@ -37,15 +37,6 @@ export const TECH_STACK = [
   "WebSocket",
 ] as const
 
-// Social Proof - Companies/Platforms worked with
-export const TRUSTED_BY = [
-  { name: "ZDLT", logo: "/logos/zdlt.svg" },
-  { name: "Bybit", logo: "/logos/bybit.svg" },
-  { name: "KuCoin", logo: "/logos/kucoin.svg" },
-  { name: "Flimty", logo: "/logos/flimty.svg" },
-  { name: "AIMI Group", logo: "/logos/aimi.svg" },
-] as const
-
 // Highlights
 export const HIGHLIGHTS = [
   {

@@ -58,11 +58,10 @@
   }
   html {
     @apply scroll-smooth;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
   section {
     scroll-snap-align: start;
-    scroll-snap-stop: always;
   }
 }
 

@@ -25,7 +25,6 @@ export default function Navbar() {
 
   const toggleDarkMode = () => {
     setIsDark(!isDark)
-    document.documentElement.classList.toggle("dark")
   }
 
   const closeMenu = () => {
@@ -53,12 +52,17 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div
+            className="hidden md:flex items-center gap-6"
+            role="navigation"
+            aria-label="Main navigation"
+          >
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-3 py-2 rounded-lg hover:bg-accent"
+                aria-label={`Navigate to ${link.label}`}
               >
                 {link.label}
               </a>
@@ -136,7 +140,11 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
+          <div
+            className="md:hidden mt-4 pb-4 border-t border-border pt-4"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
             <div className="flex flex-col gap-2">
               {NAV_LINKS.map((link) => (
                 <a

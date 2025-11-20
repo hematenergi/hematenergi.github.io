@@ -6,7 +6,9 @@ export default function About() {
       className="min-h-screen flex flex-col justify-center py-12 scroll-mt-20"
       id="about"
     >
-      <h2 className="text-3xl font-bold mb-6">About Me</h2>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        About Me
+      </h2>
       <Card>
         <CardContent className="pt-6">
           <div className="text-base leading-relaxed space-y-4 text-muted-foreground">
