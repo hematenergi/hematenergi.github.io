@@ -3,12 +3,13 @@
 import { Badge } from "@/components/ui/badge"
 import { Marquee } from "@/components/ui/marquee"
 import { TECH_STACK } from "@/lib/constants"
+import { Rocket } from "lucide-react"
 
 const TechBadge = ({ name }: { name: string }) => {
   return (
     <Badge
       variant="secondary"
-      className="px-4 py-2 text-sm font-medium whitespace-nowrap"
+      className="px-4 py-2 text-sm font-medium whitespace-nowrap hover:scale-110 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 cursor-default"
     >
       {name}
     </Badge>
@@ -57,9 +58,9 @@ export default function Stack() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground inline-flex items-center gap-2">
             ...and always exploring new technologies
-            <span className="inline-block animate-pulse ml-2">🚀</span>
+            <Rocket className="w-5 h-5 animate-pulse text-primary" />
           </p>
         </div>
       </div>

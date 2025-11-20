@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { Zap } from "lucide-react"
 
 export default function About() {
   return (
@@ -50,8 +51,8 @@ export default function About() {
             </p>
             <div className="mt-6 p-4 bg-muted/50 rounded-lg border border-border">
               <p className="text-sm italic">
-                <span className="font-semibold text-foreground">
-                  ⚡ Fun Fact:
+                <span className="font-semibold text-foreground inline-flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-yellow-500" /> Fun Fact:
                 </span>{" "}
                 I balance two full-time dev jobs, crypto projects, and dad life
                 — and still find time to chase weird ideas that might just work.

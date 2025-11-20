@@ -8,6 +8,7 @@ import {
 import { LinkButton } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CASE_STUDIES } from "@/lib/constants"
+import { ArrowRight, ExternalLink } from "lucide-react"
 
 export default function CaseStudies() {
   return (
@@ -18,7 +19,7 @@ export default function CaseStudies() {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
         Featured Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {CASE_STUDIES.map((project) => (
           <Card
             key={project.id}
@@ -52,15 +53,44 @@ export default function CaseStudies() {
             </CardHeader>
             <CardFooter>
               <LinkButton
-                href={`/case-studies/${project.id}`}
+                href={
+                  project.external
+                    ? project.link
+                    : `/case-studies/${project.id}`
+                }
                 variant="ghost"
                 className="group flex items-center gap-2"
+                target={project.external ? "_blank" : undefined}
+                rel={project.external ? "noopener noreferrer" : undefined}
               >
-                {project.external ? "Visit Site" : "View Details"}
+                {project.external ? (
+                  <>
+                    Visit Site <ExternalLink className="w-4 h-4" />
+                  </>
+                ) : (
+                  <>
+                    View Details{" "}
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </LinkButton>
             </CardFooter>
           </Card>
         ))}
+      </div>
+
+      {/* View All Projects CTA */}
+      <div className="text-center mt-12">
+        <LinkButton
+          href="https://github.com/hematenergi?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="outline"
+          className="group"
+        >
+          View All Projects on GitHub
+          <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </LinkButton>
       </div>
     </section>
   )
