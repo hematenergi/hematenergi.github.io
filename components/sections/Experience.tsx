@@ -9,7 +9,7 @@ import { EXPERIENCE } from "@/lib/constants"
 
 export default function Experience() {
   return (
-    <section className="py-12">
+    <section className="min-h-screen flex flex-col justify-center py-12">
       <h2 className="text-3xl font-bold mb-6">Experience</h2>
       <div className="space-y-6">
         {EXPERIENCE.map((exp) => (

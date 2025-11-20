@@ -31,7 +31,7 @@ export default function Hero() {
         <BlurFade delay={0.2} duration={0.6}>
           <div className="text-center space-y-4 mb-24">
             {/* Greeting */}
-            <div className="space-y-6">
+            <div className="space-y-6 mt-16">
               <p className="text-xl md:text-2xl text-primary font-medium">
                 Hi, I'm
               </p>
@@ -50,17 +50,15 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Building high-performance, real-time applications across web and
+              Building high-performance, georgeous applications across web and
               mobile platforms. Specialized in{" "}
               <span className="font-semibold text-foreground">React</span>,{" "}
               <span className="font-semibold text-foreground">TypeScript</span>,
-              and{" "}
-              <span className="font-semibold text-foreground">WebSocket</span>{" "}
-              technologies with{" "}
+              and <span className="font-semibold text-foreground">Express</span>{" "}
+              technologies with a 4 years building{" "}
               <span className="font-semibold text-foreground">
-                300M+ monthly active users
-              </span>{" "}
-              experience.
+                thoughtful, user-focused applications
+              </span>
             </p>
           </div>
 

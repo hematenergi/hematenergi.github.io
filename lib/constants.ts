@@ -1,32 +1,40 @@
 // Personal Information
 export const PERSONAL_INFO = {
   name: "Dany Arkham",
-  title: "Front-End, Mobile & Web3 Engineer",
+  alias: "hematenergi",
+  title: "Frontend & Mobile Engineer | Product Builder | Tech Dad",
   tagline:
     "Building high-performance, real-time applications across web and mobile platforms",
-  email: "danyarkham@example.com", // Update with your real email
+  email: "danyarkham@gmail.com",
   github: "https://github.com/hematenergi",
   linkedin: "https://www.linkedin.com/in/dany-arkham-615165b6/",
   resume:
     "https://drive.google.com/file/d/1vF6RlWwwhuUO7qPgoJdKQDBYivtsmX7_/view?usp=sharing",
   location: "Indonesia",
   timezone: "GMT+7",
+  company: "Anugerah Inovasi Makmur Indonesia",
+  bio: "Frontend & Mobile Engineer (React, React Native, Expo). Building products & integrating Web3.",
+  funFact:
+    "I balance two full-time dev jobs, crypto projects, and dad life — and still find time to chase weird ideas that might just work.",
 } as const
 
-// Tech Stack
+// Tech Stack - Updated from GitHub profile
 export const TECH_STACK = [
-  "React",
   "TypeScript",
+  "React",
   "React Native",
   "Expo",
   "Next.js",
   "Zustand",
-  "React Query",
-  "WebSocket",
+  "Tanstack Query",
   "Firebase",
+  "PostgreSQL",
+  "Node.js",
+  "Express",
+  "Solana Web3.js",
   "Golang",
   "Tailwind CSS",
-  "Framer Motion",
+  "WebSocket",
 ] as const
 
 // Social Proof - Companies/Platforms worked with

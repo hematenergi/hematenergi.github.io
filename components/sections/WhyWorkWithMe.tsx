@@ -8,7 +8,10 @@ import { WHY_WORK_WITH_ME } from "@/lib/constants"
 
 export default function WhyWorkWithMe() {
   return (
-    <section className="py-12 scroll-mt-20" id="why">
+    <section
+      className="min-h-screen flex flex-col justify-center py-12 scroll-mt-20"
+      id="why"
+    >
       <h2 className="text-3xl font-bold mb-6">Why Work With Me</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {WHY_WORK_WITH_ME.map((reason) => (

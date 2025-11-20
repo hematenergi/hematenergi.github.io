@@ -22,7 +22,10 @@ export default function Stack() {
   const thirdRow = TECH_STACK.slice(8)
 
   return (
-    <section id="stack" className="py-20 relative overflow-hidden">
+    <section
+      id="stack"
+      className="min-h-screen flex flex-col justify-center py-20 relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Tech Stack</h2>
