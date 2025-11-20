@@ -4,7 +4,6 @@ import Highlights from "@/components/sections/Highlights"
 import CaseStudies from "@/components/sections/CaseStudies"
 import Stack from "@/components/sections/Stack"
 import Contact from "@/components/sections/Contact"
-import FloatingCTA from "@/components/ui/floating-cta"
 import {
   Card,
   CardHeader,
@@ -66,6 +65,16 @@ export default function Page() {
         </section>
 
         <Stack />
+
+        {/* Expertise/Skills Section */}
+        <section className="py-12 scroll-mt-20" id="expertise">
+          <h2 className="text-3xl font-bold mb-6">Expertise</h2>
+          <p className="text-white/70 mb-6">
+            Specialized in building real-time, high-performance applications
+            across web and mobile platforms.
+          </p>
+        </section>
+
         <Highlights />
 
         {/* Experience Section */}
@@ -141,8 +150,6 @@ export default function Page() {
           <p className="text-sm">All rights reserved.</p>
         </footer>
       </main>
-
-      <FloatingCTA />
     </div>
   )
 }
