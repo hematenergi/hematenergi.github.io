@@ -9,6 +9,7 @@ import { LinkButton } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CASE_STUDIES } from "@/lib/constants"
 import { ArrowRight, ExternalLink } from "lucide-react"
+import { BlurFade } from "@/components/ui/blur-fade"
 
 export default function CaseStudies() {
   return (
@@ -20,62 +21,63 @@ export default function CaseStudies() {
         Featured Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {CASE_STUDIES.map((project) => (
-          <Card
-            key={project.id}
-            className="group hover:border-primary/30 transition-all duration-300 flex flex-col"
-          >
-            <CardHeader className="flex-1">
-              <div className="flex items-center gap-2 mb-2">
-                <Badge variant="secondary" className="text-xs">
-                  {project.category}
-                </Badge>
-                <span className="text-xs text-muted-foreground">
-                  {project.year}
-                </span>
-              </div>
-              <CardTitle className="mb-3 group-hover:text-primary transition-colors">
-                {project.title}
-              </CardTitle>
-              <CardDescription className="leading-relaxed mb-4">
-                {project.description}
-              </CardDescription>
-              <div className="flex flex-wrap gap-1.5">
-                {project.tags.slice(0, 3).map((tag) => (
-                  <Badge key={tag} className="text-xs">
-                    {tag}
+        {CASE_STUDIES.map((project, idx) => (
+          <BlurFade key={project.id} delay={0.2 + idx * 0.1} duration={0.5}>
+            <Card className="group hover:border-primary/30 transition-all duration-300 flex flex-col h-full">
+              <CardHeader className="flex-1">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary" className="text-xs">
+                    {project.category}
                   </Badge>
-                ))}
-                {project.tags.length > 3 && (
-                  <Badge className="text-xs">+{project.tags.length - 3}</Badge>
-                )}
-              </div>
-            </CardHeader>
-            <CardFooter>
-              <LinkButton
-                href={
-                  project.external
-                    ? project.link
-                    : `/case-studies/${project.id}`
-                }
-                variant="ghost"
-                className="group flex items-center gap-2"
-                target={project.external ? "_blank" : undefined}
-                rel={project.external ? "noopener noreferrer" : undefined}
-              >
-                {project.external ? (
-                  <>
-                    Visit Site <ExternalLink className="w-4 h-4" />
-                  </>
-                ) : (
-                  <>
-                    View Details{" "}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </>
-                )}
-              </LinkButton>
-            </CardFooter>
-          </Card>
+                  <span className="text-xs text-muted-foreground">
+                    {project.year}
+                  </span>
+                </div>
+                <CardTitle className="mb-3 group-hover:text-primary transition-colors">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="leading-relaxed mb-4">
+                  {project.description}
+                </CardDescription>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tags.slice(0, 3).map((tag) => (
+                    <Badge key={tag} className="text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                  {project.tags.length > 3 && (
+                    <Badge className="text-xs">
+                      +{project.tags.length - 3}
+                    </Badge>
+                  )}
+                </div>
+              </CardHeader>
+              <CardFooter>
+                <LinkButton
+                  href={
+                    project.external
+                      ? project.link
+                      : `/case-studies/${project.id}`
+                  }
+                  variant="ghost"
+                  className="group flex items-center gap-2"
+                  target={project.external ? "_blank" : undefined}
+                  rel={project.external ? "noopener noreferrer" : undefined}
+                >
+                  {project.external ? (
+                    <>
+                      Visit Site <ExternalLink className="w-4 h-4" />
+                    </>
+                  ) : (
+                    <>
+                      View Details{" "}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </LinkButton>
+              </CardFooter>
+            </Card>
+          </BlurFade>
         ))}
       </div>
 

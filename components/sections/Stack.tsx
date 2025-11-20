@@ -25,44 +25,42 @@ export default function Stack() {
   return (
     <section
       id="stack"
-      className="min-h-screen flex flex-col justify-center py-20 relative overflow-hidden"
+      className="min-h-screen flex flex-col justify-center py-12 relative overflow-hidden scroll-mt-20"
     >
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Tech Stack
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Technologies I use to build modern, scalable, and performant
-            applications
-          </p>
-        </div>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Tech Stack
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Technologies I use to build modern, scalable, and performant
+          applications
+        </p>
+      </div>
 
-        <div className="space-y-4">
-          <Marquee pauseOnHover className="[--duration:40s]">
-            {firstRow.map((tech, idx) => (
-              <TechBadge key={`row1-${idx}`} name={tech} />
-            ))}
-          </Marquee>
-          <Marquee reverse pauseOnHover className="[--duration:35s]">
-            {secondRow.map((tech, idx) => (
-              <TechBadge key={`row2-${idx}`} name={tech} />
-            ))}
-          </Marquee>
-          <Marquee pauseOnHover className="[--duration:45s]">
-            {thirdRow.map((tech, idx) => (
-              <TechBadge key={`row3-${idx}`} name={tech} />
-            ))}
-          </Marquee>
-        </div>
+      <div className="space-y-4">
+        <Marquee pauseOnHover className="[--duration:40s]">
+          {firstRow.map((tech, idx) => (
+            <TechBadge key={`row1-${idx}`} name={tech} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:35s]">
+          {secondRow.map((tech, idx) => (
+            <TechBadge key={`row2-${idx}`} name={tech} />
+          ))}
+        </Marquee>
+        <Marquee pauseOnHover className="[--duration:45s]">
+          {thirdRow.map((tech, idx) => (
+            <TechBadge key={`row3-${idx}`} name={tech} />
+          ))}
+        </Marquee>
+      </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground inline-flex items-center gap-2">
-            ...and always exploring new technologies
-            <Rocket className="w-5 h-5 animate-pulse text-primary" />
-          </p>
-        </div>
+      {/* Bottom CTA */}
+      <div className="text-center mt-12">
+        <p className="text-muted-foreground inline-flex items-center gap-2">
+          ...and always exploring new technologies
+          <Rocket className="w-5 h-5 animate-pulse text-primary" />
+        </p>
       </div>
     </section>
   )

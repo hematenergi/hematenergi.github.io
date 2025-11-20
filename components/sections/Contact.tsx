@@ -28,7 +28,7 @@ export default function Contact() {
             Let's Build Something Great
           </CardTitle>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
             <Card className="flex items-center gap-4 p-5 hover:border-primary/30 transition-all">
               <Mail className="w-6 h-6 flex-shrink-0 text-primary" />
               <div className="flex-1 min-w-0">
