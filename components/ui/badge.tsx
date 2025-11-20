@@ -1,11 +1,28 @@
-import { cn } from '@/lib/utils'
-import type { HTMLAttributes } from 'react'
+import { cn } from "@/lib/utils"
+import type { HTMLAttributes } from "react"
 
-export function Badge({ className, ...props }: HTMLAttributes<HTMLSpanElement>) {
+type BadgeVariant = "default" | "outline" | "secondary"
+
+interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+  variant?: BadgeVariant
+}
+
+const badgeVariants: Record<BadgeVariant, string> = {
+  default: "border-white/15 bg-white/5 text-white/80",
+  outline: "border-cyan-400/30 bg-transparent text-cyan-400",
+  secondary: "border-purple-400/30 bg-purple-500/10 text-purple-300",
+}
+
+export function Badge({
+  className,
+  variant = "default",
+  ...props
+}: BadgeProps) {
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/80',
+        "inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium",
+        badgeVariants[variant],
         className
       )}
       {...props}

@@ -1,37 +1,59 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { LinkButton } from '@/components/ui/button'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card"
+import { LinkButton } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { CASE_STUDIES } from "@/lib/constants"
 
 export default function CaseStudies() {
-  const cases = [
-    {
-      title: 'ZDLT — Web3 Trading UI',
-      desc: 'Sinkronisasi order real‑time, integrasi WebSocket, UX untuk trader profesional.',
-      link: '#'
-    },
-    {
-      title: 'Flimty — E‑Commerce/Health App',
-      desc: 'PWA + RN dengan performa tinggi, UX modern, crash rate rendah.',
-      link: '#'
-    },
-    {
-      title: 'P5 — SPA + Admin Portal',
-      desc: 'React + TS, ekspor Excel, alur admin efisien, data dinamis dengan React Query.',
-      link: 'https://aplikasi-p5.site/'
-    }
-  ]
-
   return (
-    <section className="case-studies" id="work">
-      <h3>Case Studies</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-        {cases.map((c) => (
-          <Card key={c.title}>
-            <CardHeader>
-              <CardTitle>{c.title}</CardTitle>
-              <CardDescription>{c.desc}</CardDescription>
+    <section className="py-12 scroll-mt-20" id="work">
+      <h2 className="text-3xl font-bold mb-6 text-white">Featured Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {CASE_STUDIES.map((project) => (
+          <Card
+            key={project.id}
+            className="group hover:border-cyan-500/30 transition-all duration-300 flex flex-col"
+          >
+            <CardHeader className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <Badge variant="secondary" className="text-xs">
+                  {project.category}
+                </Badge>
+                <span className="text-xs text-slate-500">{project.year}</span>
+              </div>
+              <CardTitle className="mb-3 group-hover:text-cyan-400 transition-colors">
+                {project.title}
+              </CardTitle>
+              <CardDescription className="leading-relaxed mb-4">
+                {project.description}
+              </CardDescription>
+              <div className="flex flex-wrap gap-1.5">
+                {project.tags.slice(0, 3).map((tag) => (
+                  <Badge key={tag} className="text-xs">
+                    {tag}
+                  </Badge>
+                ))}
+                {project.tags.length > 3 && (
+                  <Badge className="text-xs">+{project.tags.length - 3}</Badge>
+                )}
+              </div>
             </CardHeader>
             <CardFooter>
-              <LinkButton href={c.link} variant="outline">Read More</LinkButton>
+              <LinkButton
+                href={project.link}
+                variant="outline"
+                className="w-full"
+                {...(project.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                {project.external ? "Visit Site" : "View Details"}
+              </LinkButton>
             </CardFooter>
           </Card>
         ))}

@@ -1,15 +1,21 @@
-import { Badge } from '@/components/ui/badge'
+import { Badge } from "@/components/ui/badge"
+import { TRUSTED_BY } from "@/lib/constants"
 
 export default function SocialProof() {
-  const logos = ['Bybit', 'KuCoin', 'Flimty']
   return (
-    <section className="social-proof" id="trusted">
-      <h3>Trusted by</h3>
-      <div className="flex flex-wrap gap-2 mt-2">
-        {logos.map((l) => (
-          <Badge key={l}>{l}</Badge>
+    <div className="py-6">
+      <h3 className="text-sm font-semibold text-slate-500 mb-3">Trusted By</h3>
+      <div className="flex flex-wrap gap-2">
+        {TRUSTED_BY.map((company) => (
+          <Badge
+            key={company.name}
+            variant="secondary"
+            className="text-sm py-1.5 px-4"
+          >
+            {company.name}
+          </Badge>
         ))}
       </div>
-    </section>
+    </div>
   )
 }
