@@ -52,13 +52,11 @@ export default function Hero() {
               mobile platforms. Specialized in{" "}
               <span className="font-semibold text-foreground">React</span>,{" "}
               <span className="font-semibold text-foreground">TypeScript</span>,
-              and{" "}
-              <span className="font-semibold text-foreground">WebSocket</span>{" "}
-              technologies with{" "}
+              and <span className="font-semibold text-foreground">Express</span>{" "}
+              technologies with 4+ years of experience building{" "}
               <span className="font-semibold text-foreground">
-                4+ years of experience
+                thoughtful & user-focused applications.
               </span>{" "}
-              building thoughtful, user-focused applications.
             </p>
           </div>
 
