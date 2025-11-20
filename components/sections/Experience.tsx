@@ -4,6 +4,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { EXPERIENCE } from "@/lib/constants"
 
 export default function Experience() {
@@ -17,9 +18,9 @@ export default function Experience() {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
                 <div>
                   <CardTitle className="text-xl">{exp.role}</CardTitle>
-                  <p className="text-cyan-400 font-semibold">{exp.company}</p>
+                  <p className="font-semibold text-primary">{exp.company}</p>
                 </div>
-                <div className="text-sm text-slate-400">
+                <div className="text-sm text-muted-foreground">
                   <p>{exp.period}</p>
                   <p>{exp.location}</p>
                 </div>
@@ -29,12 +30,9 @@ export default function Experience() {
               </CardDescription>
               <div className="flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-2 py-1 rounded bg-white/5 border border-white/10 text-slate-300"
-                  >
+                  <Badge key={tech} variant="secondary" className="text-xs">
                     {tech}
-                  </span>
+                  </Badge>
                 ))}
               </div>
             </CardHeader>

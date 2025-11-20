@@ -21,9 +21,9 @@ export default function Hero() {
       {/* Retro Grid Background */}
       <RetroGrid
         angle={65}
-        opacity={0.5}
+        opacity={0.3}
         cellSize={50}
-        lightLineColor="#3b82f6"
+        lightLineColor="#d1d5db"
         darkLineColor="#60a5fa"
       />
 
@@ -32,10 +32,10 @@ export default function Hero() {
           <div className="text-center space-y-4 mb-24">
             {/* Greeting */}
             <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-blue-400 font-medium">
+              <p className="text-xl md:text-2xl text-primary font-medium">
                 Hi, I'm
               </p>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-[1.1]">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1]">
                 Dany Arkham
               </h1>
             </div>
@@ -44,19 +44,20 @@ export default function Hero() {
             <div className="h-24 md:h-28 flex items-center justify-center">
               <MorphingText
                 texts={JOB_TITLES}
-                className="text-3xl md:text-5xl text-white font-bold"
+                className="text-3xl md:text-5xl font-bold"
               />
             </div>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Building high-performance, real-time applications across web and
               mobile platforms. Specialized in{" "}
-              <span className="text-blue-400 font-semibold">React</span>,{" "}
-              <span className="text-blue-400 font-semibold">TypeScript</span>,
-              and <span className="text-blue-400 font-semibold">WebSocket</span>{" "}
+              <span className="font-semibold text-foreground">React</span>,{" "}
+              <span className="font-semibold text-foreground">TypeScript</span>,
+              and{" "}
+              <span className="font-semibold text-foreground">WebSocket</span>{" "}
               technologies with{" "}
-              <span className="text-purple-400 font-semibold">
+              <span className="font-semibold text-foreground">
                 300M+ monthly active users
               </span>{" "}
               experience.
@@ -68,7 +69,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <LinkButton
                 href="#projects"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 font-semibold sm:w-auto"
+                className="px-8 py-3 font-semibold sm:w-auto"
               >
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -76,7 +77,7 @@ export default function Hero() {
               <LinkButton
                 href="#contact"
                 variant="outline"
-                className="border-white/30 hover:bg-white/10 text-white px-8 py-3 font-semibold sm:w-auto"
+                className="px-8 py-3 font-semibold sm:w-auto"
               >
                 Get In Touch
               </LinkButton>
@@ -88,7 +89,7 @@ export default function Hero() {
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors p-2"
+                className="text-muted-foreground hover:text-foreground transition-colors p-2"
                 aria-label="GitHub"
               >
                 <Github className="h-6 w-6" />
@@ -97,14 +98,14 @@ export default function Hero() {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors p-2"
+                className="text-muted-foreground hover:text-foreground transition-colors p-2"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-6 w-6" />
               </Link>
               <Link
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="text-white/70 hover:text-white transition-colors p-2"
+                className="text-muted-foreground hover:text-foreground transition-colors p-2"
                 aria-label="Email"
               >
                 <Mail className="h-6 w-6" />

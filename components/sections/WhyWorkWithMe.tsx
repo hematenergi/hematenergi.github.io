@@ -14,10 +14,10 @@ export default function WhyWorkWithMe() {
         {WHY_WORK_WITH_ME.map((reason) => (
           <Card
             key={reason.title}
-            className="group hover:border-cyan-500/30 transition-all"
+            className="group hover:border-primary/30 transition-all"
           >
             <CardHeader>
-              <CardTitle className="text-lg mb-2 group-hover:text-cyan-400 transition-colors">
+              <CardTitle className="text-lg mb-2 group-hover:text-primary transition-colors">
                 {reason.title}
               </CardTitle>
               <CardDescription className="leading-relaxed">

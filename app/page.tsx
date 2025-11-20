@@ -12,7 +12,7 @@ import Contact from "@/components/sections/Contact"
 
 export default function Page() {
   return (
-    <div className="min-h-screen text-white">
+    <div className="min-h-screen">
       <Navbar />
       <main className="max-w-7xl mx-auto px-6">
         <Hero />

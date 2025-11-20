@@ -1,16 +1,16 @@
 import { cn } from "@/lib/utils"
 import type { HTMLAttributes } from "react"
 
-type BadgeVariant = "default" | "outline" | "secondary"
+type BadgeVariant = "default" | "secondary" | "accent"
 
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant
 }
 
 const badgeVariants: Record<BadgeVariant, string> = {
-  default: "border-white/15 bg-white/5 text-white/80",
-  outline: "border-cyan-400/30 bg-transparent text-cyan-400",
-  secondary: "border-purple-400/30 bg-purple-500/10 text-purple-300",
+  default: "border bg-card text-card-foreground",
+  secondary: "bg-secondary text-secondary-foreground border-transparent",
+  accent: "bg-accent text-accent-foreground border-transparent",
 }
 
 export function Badge({

@@ -12,21 +12,23 @@ import { CASE_STUDIES } from "@/lib/constants"
 export default function CaseStudies() {
   return (
     <section className="py-12 scroll-mt-20" id="work">
-      <h2 className="text-3xl font-bold mb-6 text-white">Featured Projects</h2>
+      <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {CASE_STUDIES.map((project) => (
           <Card
             key={project.id}
-            className="group hover:border-cyan-500/30 transition-all duration-300 flex flex-col"
+            className="group hover:border-primary/30 transition-all duration-300 flex flex-col"
           >
             <CardHeader className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant="secondary" className="text-xs">
                   {project.category}
                 </Badge>
-                <span className="text-xs text-slate-500">{project.year}</span>
+                <span className="text-xs text-muted-foreground">
+                  {project.year}
+                </span>
               </div>
-              <CardTitle className="mb-3 group-hover:text-cyan-400 transition-colors">
+              <CardTitle className="mb-3 group-hover:text-primary transition-colors">
                 {project.title}
               </CardTitle>
               <CardDescription className="leading-relaxed mb-4">
@@ -45,12 +47,9 @@ export default function CaseStudies() {
             </CardHeader>
             <CardFooter>
               <LinkButton
-                href={project.link}
-                variant="outline"
-                className="w-full"
-                {...(project.external
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
+                href={`/case-studies/${project.id}`}
+                variant="ghost"
+                className="group flex items-center gap-2"
               >
                 {project.external ? "Visit Site" : "View Details"}
               </LinkButton>

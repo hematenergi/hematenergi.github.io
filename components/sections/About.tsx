@@ -6,14 +6,14 @@ export default function About() {
       <h2 className="text-3xl font-bold mb-6">About Me</h2>
       <Card>
         <CardContent className="pt-6">
-          <div className="text-base leading-relaxed space-y-4 text-white/70">
+          <div className="text-base leading-relaxed space-y-4 text-muted-foreground">
             <p>
               I'm a Front-End and Mobile Engineer specializing in building
               real-time applications across two major domains:
             </p>
             <ul className="space-y-3 ml-4 list-none">
               <li className="flex items-start gap-3">
-                <span className="text-cyan-400 font-bold flex-shrink-0">
+                <span className="font-bold flex-shrink-0 text-primary">
                   ZDLT
                 </span>
                 <span>
@@ -23,7 +23,7 @@ export default function About() {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-purple-400 font-bold flex-shrink-0">
+                <span className="font-bold flex-shrink-0 text-primary">
                   Flimty
                 </span>
                 <span>

@@ -77,7 +77,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
           </p>
           <div className="flex flex-wrap gap-2 mt-6">
             {caseStudy.tags.map((tag) => (
-              <Badge key={tag} variant="outline">
+              <Badge key={tag} variant="secondary">
                 {tag}
               </Badge>
             ))}

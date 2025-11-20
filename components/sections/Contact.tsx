@@ -20,9 +20,9 @@ export default function Contact() {
             Let's discuss how I can help.
           </CardDescription>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8 max-w-2xl mx-auto">
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+            <Card className="flex items-center gap-3 p-4">
               <svg
-                className="w-5 h-5 text-cyan-400 flex-shrink-0"
+                className="w-5 h-5 flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -30,18 +30,18 @@ export default function Contact() {
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-slate-400">Email</p>
+                <p className="text-xs text-muted-foreground">Email</p>
                 <a
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="text-sm text-white hover:text-cyan-400 transition-colors truncate block"
+                  className="text-sm hover:text-primary transition-colors truncate block"
                 >
                   {PERSONAL_INFO.email}
                 </a>
               </div>
-            </div>
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+            </Card>
+            <Card className="flex items-center gap-3 p-4">
               <svg
-                className="w-5 h-5 text-cyan-400 flex-shrink-0"
+                className="w-5 h-5 flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -52,20 +52,20 @@ export default function Contact() {
                 />
               </svg>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-slate-400">LinkedIn</p>
+                <p className="text-xs text-muted-foreground">LinkedIn</p>
                 <a
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white hover:text-cyan-400 transition-colors truncate block"
+                  className="text-sm hover:text-primary transition-colors truncate block"
                 >
                   {PERSONAL_INFO.name}
                 </a>
               </div>
-            </div>
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+            </Card>
+            <Card className="flex items-center gap-3 p-4">
               <svg
-                className="w-5 h-5 text-cyan-400 flex-shrink-0"
+                className="w-5 h-5 flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -76,20 +76,20 @@ export default function Contact() {
                 />
               </svg>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-slate-400">GitHub</p>
+                <p className="text-xs text-muted-foreground">GitHub</p>
                 <a
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white hover:text-cyan-400 transition-colors truncate block"
+                  className="text-sm hover:text-primary transition-colors truncate block"
                 >
                   @hematenergi
                 </a>
               </div>
-            </div>
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10">
+            </Card>
+            <Card className="flex items-center gap-3 p-4">
               <svg
-                className="w-5 h-5 text-cyan-400 flex-shrink-0"
+                className="w-5 h-5 flex-shrink-0"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -100,12 +100,12 @@ export default function Contact() {
                 />
               </svg>
               <div className="flex-1 min-w-0">
-                <p className="text-xs text-slate-400">Location</p>
-                <p className="text-sm text-white">
+                <p className="text-xs text-muted-foreground">Location</p>
+                <p className="text-sm">
                   {PERSONAL_INFO.location} ({PERSONAL_INFO.timezone})
                 </p>
               </div>
-            </div>
+            </Card>
           </div>
           <div className="flex flex-wrap gap-4 justify-center">
             <LinkButton
