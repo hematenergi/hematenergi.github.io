@@ -19,8 +19,8 @@ export default function Hero() {
       {/* Retro Grid Background */}
       <RetroGrid
         angle={65}
-        opacity={0.3}
-        cellSize={50}
+        opacity={0.2}
+        cellSize={52}
         lightLineColor="#d1d5db"
         darkLineColor="#60a5fa"
       />
@@ -39,7 +39,7 @@ export default function Hero() {
             </div>
 
             {/* Morphing Job Title */}
-            <div className="h-20 sm:h-24 md:h-28 lg:h-32 flex items-center justify-center px-4">
+            <div className="h-20 sm:h-24 md:h-28 lg:h-32 flex items-center justify-center px-4 mt-1">
               <MorphingText
                 texts={JOB_TITLES}
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap"
@@ -48,12 +48,12 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Building high-performance, gorgeous applications across web and
-              mobile platforms. Specialized in{" "}
+              I turn caffeine into high-perf, gorgeous applications across web
+              and mobile platforms. Get bored in{" "}
               <span className="font-semibold text-foreground">React</span>,{" "}
               <span className="font-semibold text-foreground">TypeScript</span>,
               and <span className="font-semibold text-foreground">Express</span>{" "}
-              technologies with 4+ years of experience building{" "}
+              technologies with 4+ years of suffering to build{" "}
               <span className="font-semibold text-foreground">
                 thoughtful & user-focused applications.
               </span>{" "}
