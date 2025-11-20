@@ -23,7 +23,7 @@ export default function About() {
             <ul className="space-y-3 ml-4 list-none">
               <li className="flex items-start gap-3">
                 <span className="font-bold flex-shrink-0 text-primary">
-                  ZiroDelta (ZDLT)
+                  ZDLT
                 </span>
                 <span>
                   Solana-based ecosystem for trading, staking, and arbitrage.
