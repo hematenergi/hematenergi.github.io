@@ -26,20 +26,21 @@ export default function About() {
                   ZDLT
                 </span>
                 <span>
-                  Solana-based ecosystem for trading, staking, and arbitrage.
-                  Web3/Trading platform with real-time order synchronization
-                  integrated with Bybit & KuCoin. Focus on sub-100ms latency and
-                  professional trader UX.
+                  Solana-based ecosystem for funding rate farming, staking, and
+                  arbitrage. Web3/Dev platform with real-time order
+                  synchronization integrated with Bybit & KuCoin. Focus on
+                  reliable platform and professional UX.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="font-bold flex-shrink-0 text-primary">
-                  Flimty
+                  AIMI
                 </span>
                 <span>
-                  Health e-commerce ecosystem under AIMI Group Jakarta, serving
-                  100K+ monthly active users with high-performance PWA and React
-                  Native mobile app.
+                  IT in-house engineer managing complete tech infrastructure for
+                  health & e-commerce ecosystem under AIMI Group: PWA, mobile
+                  apps, admin dashboards, inventory systems, payment
+                  integrations. Serving 100K+ monthly active users.
                 </span>
               </li>
             </ul>

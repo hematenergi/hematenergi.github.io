@@ -40,15 +40,15 @@ export const TECH_STACK = [
 // Highlights
 export const HIGHLIGHTS = [
   {
-    title: "Real-Time Trading Dashboards",
+    title: "Funding Rate Farming & Arbitrage Platform",
     description:
-      "Built high-frequency trading UIs with WebSocket integration for ZDLT, handling real-time order synchronization across Bybit & KuCoin platforms with sub-100ms latency.",
+      "Built advanced funding rate arbitrage platform for ZDLT with real-time WebSocket integration across Bybit & KuCoin, enabling automated delta-neutral positions for funding rate farming.",
     icon: "TrendingUp",
   },
   {
-    title: "E-Commerce at Scale",
+    title: "App Developer",
     description:
-      "Developed PWA for Flimty with Core Web Vitals scoring 95+ across all metrics, optimized for low-end devices, serving 100K+ monthly active users.",
+      "IT in-house engineer at AIMI managing complete tech ecosystem: PWA, mobile apps, admin dashboards, inventory, and payment systems serving 100K+ MAU.",
     icon: "ShoppingCart",
   },
   {
@@ -60,8 +60,14 @@ export const HIGHLIGHTS = [
   {
     title: "TypeScript-First Architecture",
     description:
-      "Maintained strict TypeScript codebases with comprehensive type safety, reducing runtime errors by 80% and improving developer productivity.",
+      "Maintained strict TypeScript codebases with comprehensive type safety, reducing runtime errors by 80% and improving production productivity.",
     icon: "Code2",
+  },
+  {
+    title: "ZiroDelta — Trading Platform",
+    description:
+      "Launched public trading frontend at app.zirodelta.ag — WebSocket-powered order book, low-latency execution, and cross-exchange arbitrage tools.",
+    icon: "Globe",
   },
 ] as const
 
@@ -69,10 +75,10 @@ export const HIGHLIGHTS = [
 export const CASE_STUDIES = [
   {
     id: "zdlt",
-    title: "ZDLT — Web3 Trading Platform",
-    category: "Web3 / Trading",
+    title: "ZDLT — Web3 Developer",
+    category: "Web3 / Dev",
     description:
-      "Real-time cryptocurrency trading interface with WebSocket integration, order synchronization, and professional trader UX.",
+      "Advanced funding rate arbitrage platform with real-time WebSocket integration across multiple exchanges for automated funding rate farming strategies.",
     tags: ["React", "TypeScript", "WebSocket", "Zustand", "TradingView"],
     year: "2024-2025",
     metrics: [
@@ -106,10 +112,10 @@ export const CASE_STUDIES = [
   },
   {
     id: "flimty",
-    title: "Flimty — Health & E-Commerce Platform",
-    category: "E-Commerce / Mobile",
+    title: "AIMI — IT In-House Engineer",
+    category: "Full-Stack / IT Systems",
     description:
-      "Progressive Web App and React Native mobile application for health-focused e-commerce with 100K+ monthly active users.",
+      "IT in-house engineer managing entire tech infrastructure: PWA, mobile apps, admin dashboards, inventory systems, and payment integrations for health & e-commerce ecosystem.",
     tags: ["React", "React Native", "Expo", "React Query", "Firebase"],
     year: "2023-2025",
     metrics: [
@@ -122,11 +128,11 @@ export const CASE_STUDIES = [
       { label: "MAU", value: "100K+", description: "Monthly active users" },
     ],
     features: [
-      "Offline-first PWA with service worker caching",
-      "React Native mobile app with push notifications",
-      "Real-time inventory management",
-      "Integrated payment gateway (Midtrans, Xendit)",
-      "Admin dashboard for order management",
+      "End-to-end IT infrastructure: PWA, mobile apps, admin systems",
+      "Real-time inventory management and warehouse operations",
+      "Payment gateway integrations (Midtrans, Xendit)",
+      "Admin dashboards for operations, finance, and logistics",
+      "Push notification systems and customer engagement tools",
     ],
     challenges: [
       "Optimizing performance for low-end Android devices",
@@ -192,7 +198,7 @@ export const EXPERIENCE = [
     period: "2024 - Present",
     location: "Remote",
     description:
-      "Building Web3 trading platform with real-time order synchronization and professional trader UX",
+      "Building Web3 Dev platform with real-time order synchronization and professional trader UX",
     technologies: [
       "React",
       "TypeScript",
@@ -202,12 +208,12 @@ export const EXPERIENCE = [
     ],
   },
   {
-    company: "Flimty (AIMI Group)",
-    role: "Mobile Engineer",
+    company: "AIMI (AIMI Group)",
+    role: "IT In-House Engineer",
     period: "2023 - Present",
     location: "Remote",
     description:
-      "Developing cross-platform e-commerce and health applications with high performance and modern UX",
+      "Managing entire tech stack from web/mobile apps to admin systems, inventory management, and payment integrations for health & e-commerce ecosystem",
     technologies: [
       "React Native",
       "Expo",
@@ -311,7 +317,7 @@ export const SEO_KEYWORDS = [
   "React Native Developer",
   "TypeScript Developer",
   "Web3 Developer",
-  "Trading Platform Developer",
+  "Funding Rate Arbitrage Platform Developer",
   "E-commerce Developer",
   "Mobile App Developer",
   "Frontend Engineer",

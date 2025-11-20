@@ -28,7 +28,7 @@ export function PersonSchema() {
       },
       {
         "@type": "Organization",
-        name: "Flimty",
+        name: "AIMI",
       },
     ],
     knowsAbout: [

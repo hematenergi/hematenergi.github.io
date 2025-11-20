@@ -16,7 +16,7 @@
 - ✅ Person schema dengan nama: "Dany Arkham"
 - ✅ AlternateName: ["hematenergi", "Dany Arkham"]
 - ✅ MainEntityOfPage untuk indexing
-- ✅ WorksFor: AIMI Group, ZDLT, Flimty
+- ✅ WorksFor: AIMI Group, ZDLT
 - ✅ Email, location, social profiles (GitHub, LinkedIn)
 
 ### 3. **Open Graph Tags**

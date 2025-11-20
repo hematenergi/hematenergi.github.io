@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Dany Arkham",
   },
   description:
-    "Dual full-time engineer at ZDLT (Web3/Trading) & Flimty (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile with React, TypeScript, and React Native.",
+    "Dual full-time engineer at ZDLT (Web3/Dev) & AIMI (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile with React, TypeScript, and React Native.",
   keywords: [
     "Dany Arkham",
     "Dany Arkham Developer",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "React Native Developer",
     "TypeScript Developer",
     "Web3 Developer",
-    "Trading Platform Developer",
+    "Funding Rate Arbitrage Platform Developer",
     "E-commerce Developer",
     "Mobile App Developer",
     "Frontend Engineer",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "Indonesia Developer",
     "Jakarta Developer",
     "ZDLT Developer",
-    "Flimty Developer",
+    "AIMI Developer",
   ],
   authors: [{ name: "Dany Arkham", url: "https://hematenergi.github.io" }],
   creator: "Dany Arkham",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: "https://hematenergi.github.io/",
     title: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
     description:
-      "Dual full-time engineer at ZDLT (Web3/Trading) & Flimty (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
+      "Dual full-time engineer at ZDLT (Web3/Dev) & AIMI (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
     siteName: "Dany Arkham Portfolio",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
     description:
-      "Dual full-time engineer at ZDLT (Web3/Trading) & Flimty (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
+      "Dual full-time engineer at ZDLT (Web3/Dev) & AIMI (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
     images: ["/og-image.png"],
     creator: "@hematenergi",
   },

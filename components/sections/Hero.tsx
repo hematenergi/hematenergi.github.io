@@ -8,7 +8,12 @@ import { BlurFade } from "@/components/ui/blur-fade"
 import { PERSONAL_INFO } from "@/lib/constants"
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
 
-const JOB_TITLES = ["Front-End", "Mobile Dev", "Web3 Dev", "UX Geeks"]
+const JOB_TITLES = [
+  "Building Stuff",
+  "Breaking Stuff",
+  "Fixing Stuff",
+  "Repeat ∞",
+]
 
 export default function Hero() {
   return (
@@ -80,31 +85,40 @@ export default function Hero() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center justify-center gap-8">
+            <div className="flex items-center justify-center gap-6">
               <Link
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors p-2"
+                className="group relative text-muted-foreground hover:text-foreground transition-all p-2 hover:scale-110"
                 aria-label="GitHub"
               >
                 <Github className="h-6 w-6" />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  @hematenergi
+                </span>
               </Link>
               <Link
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors p-2"
+                className="group relative text-muted-foreground hover:text-foreground transition-all p-2 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-6 w-6" />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  Connect
+                </span>
               </Link>
               <Link
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="text-muted-foreground hover:text-foreground transition-colors p-2"
+                className="group relative text-muted-foreground hover:text-foreground transition-all p-2 hover:scale-110"
                 aria-label="Email"
               >
                 <Mail className="h-6 w-6" />
+                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  Say hi
+                </span>
               </Link>
             </div>
           </div>
