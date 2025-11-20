@@ -28,7 +28,7 @@ export default function Hero() {
       />
 
       <div className="relative z-10 w-full px-6 md:px-12">
-        <div className="max-w-5xl mx-auto backdrop-blur-sm bg-slate-900/20 rounded-2xl p-8 md:p-12 border border-white/5">
+        <div className="max-w-5xl mx-autorounded-2xl p-8 md:p-12">
           <BlurFade delay={0.2} duration={0.6}>
             <div className="text-center space-y-8">
               {/* Greeting */}
