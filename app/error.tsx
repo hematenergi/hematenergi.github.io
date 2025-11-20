@@ -12,7 +12,10 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error("Error:", error)
+    // In production, send to error tracking service (e.g., Sentry)
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error:", error)
+    }
   }, [error])
 
   return (

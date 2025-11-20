@@ -1,7 +1,7 @@
 import "./styles/globals.css"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { PersonSchema } from "./person-schema"
 
 const inter = Inter({
@@ -9,6 +9,16 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hematenergi.github.io"),
@@ -19,6 +29,10 @@ export const metadata: Metadata = {
   description:
     "Dual full-time engineer at ZDLT (Web3/Trading) & Flimty (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile with React, TypeScript, and React Native.",
   keywords: [
+    "Dany Arkham",
+    "Dany Arkham Developer",
+    "Dany Arkham Portfolio",
+    "hematenergi",
     "React Developer",
     "React Native Developer",
     "TypeScript Developer",
@@ -29,9 +43,16 @@ export const metadata: Metadata = {
     "Frontend Engineer",
     "Full Stack Developer",
     "Indonesia Developer",
+    "Jakarta Developer",
+    "ZDLT Developer",
+    "Flimty Developer",
   ],
-  authors: [{ name: "Dany Arkham" }],
+  authors: [{ name: "Dany Arkham", url: "https://hematenergi.github.io" }],
   creator: "Dany Arkham",
+  publisher: "Dany Arkham",
+  alternates: {
+    canonical: "https://hematenergi.github.io",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -55,6 +76,7 @@ export const metadata: Metadata = {
     description:
       "Dual full-time engineer at ZDLT (Web3/Trading) & Flimty (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
     images: ["/og-image.png"],
+    creator: "@hematenergi",
   },
   robots: {
     index: true,
@@ -67,6 +89,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "google-site-verification-code-here",
+  },
 }
 
 export default function RootLayout({
@@ -78,6 +103,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <PersonSchema />
+        <link rel="canonical" href="https://hematenergi.github.io" />
       </head>
       <body className={inter.className}>
         {children}

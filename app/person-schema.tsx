@@ -5,7 +5,7 @@ export function PersonSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: PERSONAL_INFO.name,
-    alternateName: PERSONAL_INFO.alias,
+    alternateName: [PERSONAL_INFO.alias, "Dany Arkham", "hematenergi"],
     jobTitle: "Frontend & Mobile Engineer",
     description: PERSONAL_INFO.bio,
     url: "https://hematenergi.github.io",
@@ -17,10 +17,20 @@ export function PersonSchema() {
       addressCountry: "ID",
       addressLocality: PERSONAL_INFO.location,
     },
-    worksFor: {
-      "@type": "Organization",
-      name: PERSONAL_INFO.company,
-    },
+    worksFor: [
+      {
+        "@type": "Organization",
+        name: PERSONAL_INFO.company,
+      },
+      {
+        "@type": "Organization",
+        name: "ZDLT",
+      },
+      {
+        "@type": "Organization",
+        name: "Flimty",
+      },
+    ],
     knowsAbout: [
       "React",
       "React Native",
@@ -33,6 +43,10 @@ export function PersonSchema() {
       "WebSocket",
       "Real-time Applications",
     ],
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://hematenergi.github.io",
+    },
   }
 
   return (
