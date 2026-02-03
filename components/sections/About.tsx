@@ -56,7 +56,7 @@ export default function About() {
                 <span className="font-semibold text-foreground inline-flex items-center gap-2">
                   <Zap className="w-4 h-4 text-yellow-500" /> Fun Fact:
                 </span>{" "}
-                I balance two full-time dev jobs, crypto projects, and dad life
+                I balance multiple full-time roles, crypto projects, and dad life
                 — and still find time to chase weird ideas that might just work.
               </p>
             </div>
