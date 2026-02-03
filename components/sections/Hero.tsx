@@ -48,13 +48,16 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              I turn caffeine into high-perf, gorgeous applications across web and mobile platforms.
-              I build mostly with{" "}
+              I turn caffeine into high-perf, gorgeous applications across web
+              and mobile platforms. Get bored in{" "}
               <span className="font-semibold text-foreground">React</span>,{" "}
               <span className="font-semibold text-foreground">TypeScript</span>,
-              and <span className="font-semibold text-foreground">Node/Express</span>,
-              with 4+ years of shipping{" "}
-              <span className="font-semibold text-foreground">thoughtful, user-focused products</span>.
+              and <span className="font-semibold text-foreground">Express</span>{" "}
+              technologies with 4+ years of suffering to build{" "}
+              <span className="font-semibold text-foreground">
+                thoughtful & user-focused applications.
+              </span>{" "}
+
             </p>
           </div>
 
