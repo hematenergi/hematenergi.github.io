@@ -1,8 +1,5 @@
 import Link from "next/link"
 import { CASE_STUDIES } from "@/lib/constants"
-
-// Static export: only build the paths returned by generateStaticParams.
-export const dynamicParams = false
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -13,35 +10,16 @@ import {
 } from "@/components/ui/card"
 import { LinkButton } from "@/components/ui/button"
 
-export async function generateStaticParams() {
-  return CASE_STUDIES.filter((cs) => !cs.external).map((caseStudy) => ({
-    id: caseStudy.id,
-  }))
-}
-
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const caseStudy = CASE_STUDIES.find((cs) => cs.id === params.id)
-
-  if (!caseStudy) {
-    return {
-      title: "Case Study Not Found",
-    }
-  }
-
-  return {
-    title: `${caseStudy.title} - Case Study | Dany Arkham`,
-    description: caseStudy.description,
-  }
-}
-
-export default function CaseStudyPage({ params }: { params: { id: string } }) {
-  const caseStudy = CASE_STUDIES.find((cs) => cs.id === params.id)
+export function CaseStudyTemplate({ id }: { id: string }) {
+  const caseStudy = CASE_STUDIES.find((cs) => cs.id === id)
 
   if (!caseStudy || caseStudy.external) {
     return (
       <div className="min-h-screen flex items-center justify-center px-6">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-3">Case study not available</h1>
+          <h1 className="text-4xl font-bold text-white mb-3">
+            Case study not available
+          </h1>
           <p className="text-slate-400 mb-8 max-w-md mx-auto">
             This case study is not available.
           </p>
@@ -57,7 +35,7 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="min-h-screen  ">
+    <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-6 py-16">
         {/* Back Button */}
         <Link
@@ -201,12 +179,9 @@ export default function CaseStudyPage({ params }: { params: { id: string } }) {
         {/* CTA */}
         <Card className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-cyan-500/20">
           <CardHeader>
-            <CardTitle className="text-2xl">
-              Interested in Similar Projects?
-            </CardTitle>
+            <CardTitle className="text-2xl">Interested in Similar Projects?</CardTitle>
             <CardDescription className="text-lg">
-              Let's discuss how I can help bring your vision to life with the
-              same level of expertise and dedication.
+              Let's discuss how I can help bring your vision to life with the same level of expertise and dedication.
             </CardDescription>
             <div className="flex gap-4 pt-4">
               <LinkButton href="/#contact">Get in Touch</LinkButton>
