@@ -37,151 +37,119 @@ export const TECH_STACK = [
   "WebSocket",
 ] as const
 
-// Highlights
+// Highlights (keep factual / repo-backed)
 export const HIGHLIGHTS = [
   {
     title: "Buddy — AI Companion App",
     description:
-      "Built an AI companion app with daily check-ins, moments/activities, proactive reminders via event extraction, and a subscription paywall.",
+      "AI companion mobile app built with React Native + Expo, Firebase (Auth/Firestore/Messaging), notifications, and subscription/paywall tooling.",
     icon: "MessageCircle",
   },
   {
-    title: "Funding Rate Farming & Arbitrage Platform",
+    title: "Funding-Rate Arbitrage Stack (Zirodelta)",
     description:
-      "Built advanced funding rate arbitrage platform for ZDLT with real-time WebSocket integration across Bybit & KuCoin, enabling automated delta-neutral positions for funding rate farming.",
+      "Microservices stack to ingest funding rates + orderbook depth (Bybit/KuCoin), store snapshots in Redis, and expose dashboards + REST APIs (FastAPI).",
     icon: "TrendingUp",
   },
   {
-    title: "App Developer",
+    title: "AIMI / Flimty Mobile App",
     description:
-      "IT in-house engineer at AIMI managing complete tech ecosystem: PWA, mobile apps, admin dashboards, inventory, and payment systems serving 100K+ MAU.",
+      "React Native app with Firebase Auth/Messaging, AppCenter (analytics/crashes), CodePush, and real-time updates tooling.",
     icon: "ShoppingCart",
   },
   {
-    title: "Mobile-First Development",
+    title: "TypeScript + React Ecosystem",
     description:
-      "Architected cross-platform mobile apps using React Native, Expo, and Vision Camera for barcode scanning workflows with 99.5% crash-free rate.",
-    icon: "Smartphone",
-  },
-  {
-    title: "TypeScript-First Architecture",
-    description:
-      "Maintained strict TypeScript codebases with comprehensive type safety, reducing runtime errors by 80% and improving production productivity.",
+      "TypeScript-first UI codebases across web & mobile, focusing on maintainable state management and component systems.",
     icon: "Code2",
-  },
-  {
-    title: "ZiroDelta — Trading Platform",
-    description:
-      "Launched public trading frontend at app.zirodelta.ag — WebSocket-powered order book, low-latency execution, and cross-exchange arbitrage tools.",
-    icon: "Globe",
   },
 ] as const
 
-// Case Studies
+// Case Studies (repo-backed; avoid unverifiable metrics)
 export const CASE_STUDIES = [
   {
     id: "buddy",
     title: "Buddy — AI Companion App",
     category: "Mobile / AI",
     description:
-      "AI companion app for daily check-ins and emotional support, with event-driven reminders and subscription monetization.",
-    tags: ["React Native", "Expo", "Firebase", "OpenAI", "RevenueCat"],
+      "AI companion app built with React Native + Expo, Firebase (Auth/Firestore/Messaging), notifications, and subscription/paywall tooling.",
+    tags: ["React Native", "Expo", "Firebase", "OpenAI", "Notifee", "RevenueCat", "Superwall"],
     year: "2025-2026",
-    metrics: [
-      { label: "Crash-free", value: "99%+", description: "Stability target" },
-      { label: "Latency", value: "Realtime", description: "Streaming chat UX" },
-      { label: "Retention", value: "N/A", description: "(add once measured)" },
-    ],
     features: [
-      "Streaming chat UX with multi-bubble responses",
-      "Daily check-in + streak mechanics",
-      "Moments: guided activities with custom instructions",
-      "Event extraction from chats to schedule follow-up reminders",
-      "Buddy+ subscription paywall (Superwall + RevenueCat)",
+      "Expo Router app structure with modular screens",
+      "Moments feature: create/publish custom guided activities with instructions + preview chat",
+      "Multi-bubble assistant rendering (delimiter-based message splitting)",
+      "Notifications settings with local scheduling + streak reminders",
+      "Firebase Auth + Firestore persistence, plus FCM token + preferences sync",
+      "Subscription/paywall dependencies: RevenueCat + Superwall",
     ],
     challenges: [
-      "Balancing safety, privacy, and personalization in a chat-first product",
-      "Keeping the companion feeling alive without heavy gamification",
-      "Designing a premium experience without aggressive paywalls",
+      "Coordinating notification permissions, local schedules, and remote token sync",
+      "Keeping app state consistent between local store and Firestore",
+      "Designing safe UX around account deletion and user data",
     ],
     solutions: [
-      "Structured prompts + guardrails for reliable assistant behavior",
-      "Event-based follow-ups with notification throttling",
-      "Progressive feature gating with clear UX messaging",
+      "Centralized notification service (init/check permissions/schedule/cancel) called from settings flows",
+      "Store-first updates with Firestore persistence (preferences + FCM token) for multi-device consistency",
+      "Clear permission prompts and fallback paths (open device settings when denied)",
     ],
     link: "/case-studies/buddy",
     external: false,
   },
   {
     id: "zdlt",
-    title: "ZDLT — Web3 Developer",
-    category: "Web3 / Dev",
+    title: "Zirodelta — Funding-Rate Arbitrage Stack",
+    category: "Backend / Trading Infra",
     description:
-      "Advanced funding rate arbitrage platform with real-time WebSocket integration across multiple exchanges for automated funding rate farming strategies.",
-    tags: ["React", "TypeScript", "WebSocket", "Zustand", "TradingView"],
+      "Microservices stack to ingest funding rates + orderbook depth (Bybit/KuCoin), store snapshots in Redis, and serve dashboards + REST APIs.",
+    tags: ["Python", "FastAPI", "Redis", "Docker", "WebSocket"],
     year: "2024-2025",
-    metrics: [
-      {
-        label: "Latency",
-        value: "<100ms",
-        description: "WebSocket message processing",
-      },
-      { label: "Uptime", value: "99.9%", description: "Service availability" },
-      { label: "Orders/day", value: "50K+", description: "Peak daily volume" },
-    ],
     features: [
-      "Real-time order book synchronization across multiple exchanges",
-      "Advanced charting with TradingView integration",
-      "Multi-account portfolio management",
-      "Automated trading bot interface",
-      "WebSocket-based live price feeds",
+      "Exchange adapters (Bybit WebSocket; KuCoin HTTP/WebSocket) writing normalized snapshots to Redis",
+      "REST endpoints for market data + strategy snapshot",
+      "Static dashboards for funding rates, orderbook depth, and top candidates",
+      "Async strategy loop ranking candidates using per-day normalized differentials",
+      "Docker Compose setup for Redis/Postgres/API services",
     ],
     challenges: [
-      "Handling high-frequency updates without UI lag",
-      "Managing complex state across multiple exchange connections",
-      "Ensuring data consistency in real-time environment",
+      "Normalizing data from multiple venues into consistent payloads and keys",
+      "Keeping dashboards simple while still exposing useful diagnostics",
+      "Designing a strategy loop that is tunable and observable via config",
     ],
     solutions: [
-      "Implemented virtual scrolling for order books with 1000+ entries",
-      "Used Zustand with immer for efficient state updates",
-      "Built custom WebSocket reconnection logic with exponential backoff",
+      "Defined explicit Redis key conventions + payload schema for each venue",
+      "Separated concerns: adapters → Redis, API → aggregation, dashboards → fetch()",
+      "Strategy outputs snapshot key + PubSub channel for downstream consumers",
     ],
     link: "/case-studies/zdlt",
     external: false,
   },
   {
     id: "flimty",
-    title: "AIMI — IT In-House Engineer",
-    category: "Full-Stack / IT Systems",
+    title: "Flimty — React Native App",
+    category: "Mobile / Commerce",
     description:
-      "IT in-house engineer managing entire tech infrastructure: PWA, mobile apps, admin dashboards, inventory systems, and payment integrations for health & e-commerce ecosystem.",
-    tags: ["React", "React Native", "Expo", "React Query", "Firebase"],
+      "React Native app with authentication, push messaging, analytics/crash reporting, OTA updates, and real-time messaging tooling.",
+    tags: ["React Native", "Firebase", "Notifee", "AppCenter", "CodePush", "Redux Toolkit"],
     year: "2023-2025",
-    metrics: [
-      { label: "Performance", value: "95+", description: "Lighthouse score" },
-      {
-        label: "Crash-free",
-        value: "99.5%",
-        description: "Mobile app stability",
-      },
-      { label: "MAU", value: "100K+", description: "Monthly active users" },
-    ],
     features: [
-      "End-to-end IT infrastructure: PWA, mobile apps, admin systems",
-      "Real-time inventory management and warehouse operations",
-      "Payment gateway integrations (Midtrans, Xendit)",
-      "Admin dashboards for operations, finance, and logistics",
-      "Push notification systems and customer engagement tools",
+      "React Navigation stack/tab navigation",
+      "Firebase Auth + Firebase Messaging",
+      "Push notifications via Notifee",
+      "Analytics/crash reporting with AppCenter",
+      "OTA updates with CodePush",
+      "Real-time channels via Pusher WebSocket client",
+      "Camera workflows via react-native-vision-camera",
     ],
     challenges: [
-      "Optimizing performance for low-end Android devices",
-      "Syncing data across web and mobile platforms",
-      "Managing complex checkout flow with multiple payment methods",
+      "Managing a large production RN app with multiple native dependencies",
+      "Keeping release cadence safe with OTA updates",
+      "Handling real-time updates reliably on mobile networks",
     ],
     solutions: [
-      "Implemented code-splitting and lazy loading, reducing initial bundle by 40%",
-      "Used React Query for efficient data synchronization and caching",
-      "Built reusable headless UI components for consistent UX",
+      "Instrumented releases with AppCenter analytics/crashes",
+      "Used CodePush for controlled rollout of JS bundles",
+      "Leveraged established libraries (Pusher/Notifee/Firebase) to reduce custom infra",
     ],
     link: "/case-studies/flimty",
     external: false,
@@ -327,32 +295,27 @@ export const WHY_WORK_WITH_ME = [
   {
     title: "Full-Stack Versatility",
     description:
-      "Deep expertise in both mobile and web platforms means you get cohesive solutions that work seamlessly across all devices, not siloed implementations.",
+      "Comfortable shipping across mobile, web, and backend services — so projects stay cohesive instead of siloed.",
   },
   {
     title: "Modern Tech Stack",
     description:
-      "Leverage cutting-edge tools like TypeScript, Zustand, and React Query combined with strong emphasis on maintainability, resulting in fewer bugs and faster iteration cycles.",
+      "TypeScript, React/React Native, and pragmatic state/data tools (e.g., Zustand / Query patterns) with a focus on maintainability.",
   },
   {
     title: "Performance-First Mindset",
     description:
-      "Every line of code is written with performance in mind. From Core Web Vitals optimization to efficient state management, your users get blazing-fast experiences.",
+      "Performance and UX are treated as product features: smooth UI updates, sensible caching, and careful rendering.",
   },
   {
-    title: "Production-Ready Code",
+    title: "Production Habits",
     description:
-      "Shipped mission-critical applications handling real money in trading platforms and serving 100K+ users in e-commerce. I know how to build for scale and reliability.",
+      "Instrumentation, safe rollouts, and clear error handling — the boring stuff that keeps apps reliable.",
   },
   {
     title: "End-to-End Ownership",
     description:
-      "From UI/UX implementation to backend integration and deployment, I can handle the full development lifecycle, reducing communication overhead and shipping faster.",
-  },
-  {
-    title: "Continuous Learning",
-    description:
-      "Staying current with the latest in web and mobile development. Recently upgraded to M3 MacBook with 16GB/512GB for optimal development workflow and testing.",
+      "Can take features from spec → implementation → deployment, while keeping communication tight.",
   },
 ] as const
 
