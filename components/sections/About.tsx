@@ -18,7 +18,7 @@ export default function About() {
             </p>
             <p>
               I'm a Front-End and Mobile Engineer specializing in building
-              real-time applications across two major domains:
+              real-time applications across three major domains:
             </p>
             <ul className="space-y-3 ml-4 list-none">
               <li className="flex items-start gap-3">
@@ -33,14 +33,15 @@ export default function About() {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="font-bold flex-shrink-0 text-primary">
-                  AIMI
-                </span>
+                <span className="font-bold flex-shrink-0 text-primary">AIMI</span>
                 <span>
-                  IT in-house engineer managing complete tech infrastructure for
-                  health & e-commerce ecosystem under AIMI Group: PWA, mobile
-                  apps, admin dashboards, inventory systems, payment
-                  integrations. Serving 100K+ monthly active users.
+                  IT in-house engineer managing complete tech infrastructure for health & e-commerce ecosystem under AIMI Group: PWA, mobile apps, admin dashboards, inventory systems, and payment integrations. Serving 100K+ monthly active users.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold flex-shrink-0 text-primary">Buddy</span>
+                <span>
+                  AI companion app focused on daily check-ins and emotional support, with push-triggered follow-ups and a premium subscription model.
                 </span>
               </li>
             </ul>

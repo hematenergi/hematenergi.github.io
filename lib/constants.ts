@@ -15,7 +15,7 @@ export const PERSONAL_INFO = {
   company: "Anugerah Inovasi Makmur Indonesia",
   bio: "Frontend & Mobile Engineer (React, React Native, Expo). Building products & integrating Web3.",
   funFact:
-    "I balance two full-time dev jobs, crypto projects, and dad life — and still find time to chase weird ideas that might just work.",
+    "I balance multiple full-time roles, crypto projects, and dad life — and still find time to chase weird ideas that might just work.",
 } as const
 
 // Tech Stack - Updated from GitHub profile
@@ -39,6 +39,12 @@ export const TECH_STACK = [
 
 // Highlights
 export const HIGHLIGHTS = [
+  {
+    title: "Buddy — AI Companion App",
+    description:
+      "Built an AI companion app with daily check-ins, moments/activities, proactive reminders via event extraction, and a subscription paywall.",
+    icon: "MessageCircle",
+  },
   {
     title: "Funding Rate Farming & Arbitrage Platform",
     description:
@@ -73,6 +79,39 @@ export const HIGHLIGHTS = [
 
 // Case Studies
 export const CASE_STUDIES = [
+  {
+    id: "buddy",
+    title: "Buddy — AI Companion App",
+    category: "Mobile / AI",
+    description:
+      "AI companion app for daily check-ins and emotional support, with event-driven reminders and subscription monetization.",
+    tags: ["React Native", "Expo", "Firebase", "OpenAI", "RevenueCat"],
+    year: "2025-2026",
+    metrics: [
+      { label: "Crash-free", value: "99%+", description: "Stability target" },
+      { label: "Latency", value: "Realtime", description: "Streaming chat UX" },
+      { label: "Retention", value: "N/A", description: "(add once measured)" },
+    ],
+    features: [
+      "Streaming chat UX with multi-bubble responses",
+      "Daily check-in + streak mechanics",
+      "Moments: guided activities with custom instructions",
+      "Event extraction from chats to schedule follow-up reminders",
+      "Buddy+ subscription paywall (Superwall + RevenueCat)",
+    ],
+    challenges: [
+      "Balancing safety, privacy, and personalization in a chat-first product",
+      "Keeping the companion feeling alive without heavy gamification",
+      "Designing a premium experience without aggressive paywalls",
+    ],
+    solutions: [
+      "Structured prompts + guardrails for reliable assistant behavior",
+      "Event-based follow-ups with notification throttling",
+      "Progressive feature gating with clear UX messaging",
+    ],
+    link: "/case-studies/buddy",
+    external: false,
+  },
   {
     id: "zdlt",
     title: "ZDLT — Web3 Developer",
@@ -192,6 +231,21 @@ export const CASE_STUDIES = [
 
 // Work Experience
 export const EXPERIENCE = [
+  {
+    company: "Buddy",
+    role: "Product Engineer (Mobile / AI)",
+    period: "2025 - Present",
+    location: "Remote",
+    description:
+      "Building an AI companion app focused on daily check-ins, guided moments, and event-driven reminders with a subscription model.",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Firebase",
+      "OpenAI",
+      "RevenueCat",
+    ],
+  },
   {
     company: "ZDLT",
     role: "Front-End Engineer",
