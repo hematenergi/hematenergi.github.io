@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Zap } from "lucide-react"
+import { PERSONAL_INFO } from "@/lib/constants"
 
 export default function About() {
   return (
@@ -14,50 +15,47 @@ export default function About() {
         <CardContent className="pt-6">
           <div className="text-base leading-relaxed space-y-4 text-muted-foreground">
             <p className="text-lg font-semibold text-foreground">
-              Frontend & Mobile Engineer | Product Builder | Tech Dad
+              Mobile & Product Engineer · Dad of one · Based in Indonesia (GMT+7)
             </p>
             <p>
-              I'm a Front-End and Mobile Engineer specializing in building
-              real-time applications across three major domains:
+              I&apos;ve spent the last five years shipping mobile and web
+              products to real users:
             </p>
             <ul className="space-y-3 ml-4 list-none">
               <li className="flex items-start gap-3">
-                <span className="font-bold flex-shrink-0 text-primary">
-                  ZDLT
-                </span>
-                <span>
-                  Solana-based ecosystem for funding rate farming, staking, and
-                  arbitrage. Web3/Dev platform with real-time order
-                  synchronization integrated with Bybit & KuCoin. Focus on
-                  reliable platform and professional UX.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
                 <span className="font-bold flex-shrink-0 text-primary">AIMI</span>
                 <span>
-                  IT in-house engineer managing complete tech infrastructure for health & e-commerce ecosystem under AIMI Group: PWA, mobile apps, admin dashboards, inventory systems, and payment integrations. Serving 100K+ monthly active users.
+                  In-house engineer for Flimty since 2021: the consumer app (100K+
+                  monthly active users), POS and stock PWA, field-sales app, CRM,
+                  LMS and customer portal.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="font-bold flex-shrink-0 text-primary">Buddy</span>
                 <span>
-                  AI companion app focused on daily check-ins and emotional support, with push-triggered follow-ups and a premium subscription model.
+                  Contract (Dec 2025 – Apr 2026). Shipped an AI companion app to the
+                  App Store with onboarding, paywalls, subscriptions, notifications
+                  and widgets.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold flex-shrink-0 text-primary">ZDLT</span>
+                <span>
+                  Contract (Jun 2025 – Feb 2026). Real-time trading dashboards for
+                  funding-rate arbitrage across Bybit and KuCoin.
                 </span>
               </li>
             </ul>
             <p>
-              My focus is on creating clean, performant interfaces with
-              maintainable codebases. I leverage modern tools like TypeScript,
-              Zustand, Tanstack Query, and WebSocket to deliver production-ready
-              applications that scale.
+              On the side I build Fragment, an open-source project memory for AI
+              coding agents that I use on my own production release pipeline.
             </p>
             <div className="mt-6 p-4 bg-muted/50 rounded-lg border border-border">
               <p className="text-sm italic">
                 <span className="font-semibold text-foreground inline-flex items-center gap-2">
                   <Zap className="w-4 h-4 text-yellow-500" /> Fun Fact:
                 </span>{" "}
-                I balance multiple full-time roles, crypto projects, and dad life
-                — and still find time to chase weird ideas that might just work.
+                {PERSONAL_INFO.funFact}
               </p>
             </div>
           </div>

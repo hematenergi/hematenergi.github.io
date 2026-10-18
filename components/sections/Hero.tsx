@@ -48,16 +48,14 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              I turn caffeine into high-perf, gorgeous applications across web
-              and mobile platforms. Get bored in{" "}
-              <span className="font-semibold text-foreground">React</span>,{" "}
-              <span className="font-semibold text-foreground">TypeScript</span>,
-              and <span className="font-semibold text-foreground">Express</span>{" "}
-              technologies with 4+ years of suffering to build{" "}
+              I ship{" "}
+              <span className="font-semibold text-foreground">React Native</span> and{" "}
+              <span className="font-semibold text-foreground">Expo</span> apps to
+              production — a commerce app with 100K+ monthly users, an AI companion
+              app on the App Store, and{" "}
               <span className="font-semibold text-foreground">
-                thoughtful & user-focused applications.
-              </span>{" "}
-
+                open-source tooling for AI coding agents.
+              </span>
             </p>
           </div>
 

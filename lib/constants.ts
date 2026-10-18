@@ -2,9 +2,9 @@
 export const PERSONAL_INFO = {
   name: "Dany Arkham",
   alias: "hematenergi",
-  title: "Frontend & Mobile Engineer | Product Builder | Tech Dad",
+  title: "Mobile & Product Engineer · React Native · Expo · AI apps",
   tagline:
-    "Building high-performance, real-time applications across web and mobile platforms",
+    "Shipping React Native apps to production — 100K+ MAU, AI apps on the App Store, and tooling for AI coding agents.",
   email: "danyarkham@gmail.com",
   github: "https://github.com/hematenergi",
   linkedin: "https://www.linkedin.com/in/dany-arkham-615165b6/",
@@ -13,9 +13,9 @@ export const PERSONAL_INFO = {
   location: "Indonesia",
   timezone: "GMT+7",
   company: "Anugerah Inovasi Makmur Indonesia",
-  bio: "Frontend & Mobile Engineer (React, React Native, Expo). Building products & integrating Web3.",
+  bio: "Mobile & product engineer (React Native, Expo, TypeScript). 5+ years in production; building Fragment, open-source memory for AI coding agents.",
   funFact:
-    "I balance multiple full-time roles, crypto projects, and dad life — and still find time to chase weird ideas that might just work.",
+    "My most frequent code reviewer is an AI agent — so I built Fragment to make it remember why I said no.",
 } as const
 
 // Tech Stack - Updated from GitHub profile
@@ -58,9 +58,9 @@ export const HIGHLIGHTS = [
     icon: "ShoppingCart",
   },
   {
-    title: "TypeScript + React Ecosystem",
+    title: "Fragment — Memory for AI Coding Agents",
     description:
-      "TypeScript-first UI codebases across web & mobile, focusing on maintainable state management and component systems.",
+      "Open-source harness (Bash + Git, MIT) that keeps decisions, rejected paths and next steps in the repo. Used on two production repos with a shared CI guard.",
     icon: "Code2",
   },
 ] as const
@@ -200,49 +200,31 @@ export const CASE_STUDIES = [
 // Work Experience
 export const EXPERIENCE = [
   {
-    company: "Buddy",
-    role: "Product Engineer (Mobile / AI)",
-    period: "2025 - Present",
+    company: "AIMI Group (Flimty)",
+    role: "Mobile & Web Engineer (In-house)",
+    period: "2021 - Present",
     location: "Remote",
     description:
-      "Building an AI companion app focused on daily check-ins, guided moments, and event-driven reminders with a subscription model.",
-    technologies: [
-      "React Native",
-      "Expo",
-      "Firebase",
-      "OpenAI",
-      "RevenueCat",
-    ],
+      "Build and maintain the Flimty consumer app (100K+ MAU) and six internal products: field-sales app, POS & stock PWA, CRM and affiliate dashboards, LMS and a Next.js customer portal.",
+    technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Next.js"],
   },
   {
-    company: "ZDLT",
+    company: "Buddy (Canada)",
+    role: "Product Engineer, Mobile / AI",
+    period: "Dec 2025 - Apr 2026",
+    location: "Remote · Contract",
+    description:
+      "Shipped Buddy: Virtual Pet Chat to the App Store with 10+ releases: onboarding v2, paywalls and subscriptions, notifications, streaks and widgets.",
+    technologies: ["Expo", "React Native", "Firebase", "RevenueCat", "PostHog"],
+  },
+  {
+    company: "ZiroDelta",
     role: "Front-End Engineer",
-    period: "2024 - Present",
-    location: "Remote",
+    period: "Jun 2025 - Feb 2026",
+    location: "Remote · Contract",
     description:
-      "Building Web3 Dev platform with real-time order synchronization and professional trader UX",
-    technologies: [
-      "React",
-      "TypeScript",
-      "WebSocket",
-      "Zustand",
-      "TradingView",
-    ],
-  },
-  {
-    company: "AIMI (AIMI Group)",
-    role: "IT In-House Engineer",
-    period: "2023 - Present",
-    location: "Remote",
-    description:
-      "Managing entire tech stack from web/mobile apps to admin systems, inventory management, and payment integrations for health & e-commerce ecosystem",
-    technologies: [
-      "React Native",
-      "Expo",
-      "React Query",
-      "Firebase",
-      "Vision Camera",
-    ],
+      "Real-time trading dashboards for funding-rate arbitrage across Bybit and KuCoin: live portfolio, executions and trade drill-downs.",
+    technologies: ["React", "TypeScript", "WebSocket", "Zustand"],
   },
 ] as const
 
