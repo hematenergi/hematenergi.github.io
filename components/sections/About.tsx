@@ -15,7 +15,7 @@ export default function About() {
         <CardContent className="pt-6">
           <div className="text-base leading-relaxed space-y-4 text-muted-foreground">
             <p className="text-lg font-semibold text-foreground">
-              Mobile & Product Engineer · Dad of one · Based in Indonesia (GMT+7)
+              Frontend & Mobile Engineer · Web3 · Dad of one · Based in Indonesia (GMT+7)
             </p>
             <p>
               I&apos;ve spent the last five years shipping mobile and web
@@ -40,14 +40,16 @@ export default function About() {
               <li className="flex items-start gap-3">
                 <span className="font-bold flex-shrink-0 text-primary">ZDLT</span>
                 <span>
-                  Contract (Jun 2025 – Feb 2026). Real-time trading dashboards for
-                  funding-rate arbitrage across Bybit and KuCoin.
+                  Contract (Jun 2025 – Feb 2026). Solana trading dApp: built the
+                  wallet layer and core trading screens of the web app, and the
+                  wallet flows of the React Native app (Phantom, WalletConnect).
                 </span>
               </li>
             </ul>
             <p>
-              On the side I build Fragment, an open-source project memory for AI
-              coding agents that I use on my own production release pipeline.
+              On my own time I build on-chain tooling (Uniswap v3/v4 with viem,
+              a Meteora DLMM bot on Solana) and Fragment, an open-source project
+              memory for AI coding agents.
             </p>
             <div className="mt-6 p-4 bg-muted/50 rounded-lg border border-border">
               <p className="text-sm italic">

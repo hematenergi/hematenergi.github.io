@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Dany Arkham",
   },
   description:
-    "Dual full-time engineer at ZDLT (Web3/Dev) & AIMI (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile with React, TypeScript, and React Native.",
+    "Frontend & mobile engineer in Indonesia. I build web and mobile apps on one React + TypeScript stack: Solana dApps and wallet flows, real-time trading dashboards, and App Store apps.",
   keywords: [
     "Dany Arkham",
     "Dany Arkham Developer",
@@ -59,14 +59,14 @@ export const metadata: Metadata = {
     url: "https://hematenergi.github.io/",
     title: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
     description:
-      "Dual full-time engineer at ZDLT (Web3/Dev) & AIMI (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
+      "Frontend & mobile engineer in Indonesia. I build web and mobile apps on one React + TypeScript stack: Solana dApps and wallet flows, real-time trading dashboards, and App Store apps.",
     siteName: "Dany Arkham Portfolio",
     images: [
       {
         url: "/og-image.png", // Place a 1200x630 PNG image in public/og-image.png
         width: 1200,
         height: 630,
-        alt: "Dany Arkham - Front-End & Mobile Engineer",
+        alt: "Dany Arkham - Frontend, Mobile & Web3 Engineer",
       },
     ],
   },
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
     description:
-      "Dual full-time engineer at ZDLT (Web3/Dev) & AIMI (E-Commerce/Health). I build fast, reliable, and maintainable real-time UIs on web & mobile.",
+      "Frontend & mobile engineer in Indonesia. I build web and mobile apps on one React + TypeScript stack: Solana dApps and wallet flows, real-time trading dashboards, and App Store apps.",
     images: ["/og-image.png"],
     creator: "@hematenergi",
   },

@@ -2,9 +2,9 @@
 export const PERSONAL_INFO = {
   name: "Dany Arkham",
   alias: "hematenergi",
-  title: "Mobile & Product Engineer · React Native · Expo · AI apps",
+  title: "Frontend & Mobile Engineer · React · React Native · Web3 (Solana, EVM)",
   tagline:
-    "Shipping React Native apps to production — a health-commerce app, AI apps on the App Store, and tooling for AI coding agents.",
+    "Web and mobile apps on one React + TypeScript stack — Solana dApps, real-time trading dashboards, and App Store apps.",
   email: "danyarkham@gmail.com",
   github: "https://github.com/hematenergi",
   linkedin: "https://www.linkedin.com/in/dany-arkham-615165b6/",
@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
   location: "Indonesia",
   timezone: "GMT+7",
   company: "Anugerah Inovasi Makmur Indonesia",
-  bio: "Mobile & product engineer (React Native, Expo, TypeScript). 5+ years in production; building Fragment, open-source memory for AI coding agents.",
+  bio: "Frontend & mobile engineer (React, Next.js, React Native, TypeScript) and web3 frontend (Solana, EVM). 5+ years in production; building Fragment, open-source memory for AI coding agents.",
   funFact:
     "My most frequent code reviewer is an AI agent — so I built Fragment to make it remember why I said no.",
 } as const
@@ -46,9 +46,9 @@ export const HIGHLIGHTS = [
     icon: "MessageCircle",
   },
   {
-    title: "Funding-Rate Arbitrage Stack (Zirodelta)",
+    title: "ZiroDelta — Solana Trading dApp",
     description:
-      "Microservices stack to ingest funding rates + orderbook depth (Bybit/KuCoin), store snapshots in Redis, and expose dashboards + REST APIs (FastAPI).",
+      "Built the wallet layer (wallet-adapter provider, connection, auth) and core trading screens of the web app, plus the React Native wallet flows: Phantom, WalletConnect, send/receive.",
     icon: "TrendingUp",
   },
   {
@@ -219,12 +219,12 @@ export const EXPERIENCE = [
   },
   {
     company: "ZiroDelta",
-    role: "Front-End Engineer",
+    role: "Front-End Engineer (Web3)",
     period: "Jun 2025 - Feb 2026",
     location: "Remote · Contract",
     description:
-      "Real-time trading dashboards for funding-rate arbitrage across Bybit and KuCoin: live portfolio, executions and trade drill-downs.",
-    technologies: ["React", "TypeScript", "WebSocket", "Zustand"],
+      "Solana dApp for funding-rate arbitrage: built the wallet layer and core trading screens of the web app, live data over WebSocket, and the wallet flows of the React Native app.",
+    technologies: ["Solana", "React", "TypeScript", "WebSocket", "Zustand"],
   },
 ] as const
 
@@ -316,6 +316,9 @@ export const SEO_KEYWORDS = [
   "React Native Developer",
   "TypeScript Developer",
   "Web3 Developer",
+  "Web3 Frontend Engineer",
+  "Solana Developer",
+  "dApp Developer",
   "Funding Rate Arbitrage Platform Developer",
   "E-commerce Developer",
   "Mobile App Developer",

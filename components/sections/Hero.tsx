@@ -48,14 +48,13 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              I ship{" "}
-              <span className="font-semibold text-foreground">React Native</span> and{" "}
-              <span className="font-semibold text-foreground">Expo</span> apps to
-              production — a health-commerce consumer app, an AI companion app on the
-              App Store, and{" "}
-              <span className="font-semibold text-foreground">
-                open-source tooling for AI coding agents.
-              </span>
+              I build web and mobile apps on one{" "}
+              <span className="font-semibold text-foreground">React</span> +{" "}
+              <span className="font-semibold text-foreground">TypeScript</span>{" "}
+              stack — from{" "}
+              <span className="font-semibold text-foreground">Solana dApps</span>{" "}
+              and real-time trading dashboards to apps on the App Store — and ship
+              them to production.
             </p>
           </div>
 

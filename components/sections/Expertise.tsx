@@ -10,7 +10,7 @@ export default function Expertise() {
   const services = [
     {
       title: "Frontend & Mobile Development",
-      description: "React, React Native, Expo, Flutter",
+      description: "React, Next.js, React Native, Expo, TypeScript",
       icon: Smartphone,
     },
     {
@@ -19,8 +19,8 @@ export default function Expertise() {
       icon: Palette,
     },
     {
-      title: "Web3 & Crypto Integrations",
-      description: "Solana, Phantom, Bybit API",
+      title: "Web3 Frontend",
+      description: "Solana wallet-adapter, Phantom, WalletConnect, SPL tokens, viem (EVM)",
       icon: Link2,
     },
     {
