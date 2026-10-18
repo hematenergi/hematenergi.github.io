@@ -4,7 +4,7 @@ export const PERSONAL_INFO = {
   alias: "hematenergi",
   title: "Mobile & Product Engineer · React Native · Expo · AI apps",
   tagline:
-    "Shipping React Native apps to production — 100K+ MAU, AI apps on the App Store, and tooling for AI coding agents.",
+    "Shipping React Native apps to production — a health-commerce app, AI apps on the App Store, and tooling for AI coding agents.",
   email: "danyarkham@gmail.com",
   github: "https://github.com/hematenergi",
   linkedin: "https://www.linkedin.com/in/dany-arkham-615165b6/",
@@ -205,7 +205,7 @@ export const EXPERIENCE = [
     period: "2021 - Present",
     location: "Remote",
     description:
-      "Build and maintain the Flimty consumer app (100K+ MAU) and six internal products: field-sales app, POS & stock PWA, CRM and affiliate dashboards, LMS and a Next.js customer portal.",
+      "Build and maintain the Flimty consumer app and six internal products: field-sales app, POS & stock PWA, CRM and affiliate dashboards, LMS and a Next.js customer portal.",
     technologies: ["React Native", "Expo", "TypeScript", "Firebase", "Next.js"],
   },
   {
@@ -214,7 +214,7 @@ export const EXPERIENCE = [
     period: "Dec 2025 - Apr 2026",
     location: "Remote · Contract",
     description:
-      "Shipped Buddy: Virtual Pet Chat to the App Store with 10+ releases: onboarding v2, paywalls and subscriptions, notifications, streaks and widgets.",
+      "Shipped Buddy: Virtual Pet Chat to the App Store as part of a two-person team (9 App Store releases in about seven weeks): onboarding v2, paywalls and subscriptions, notifications, streaks and widgets.",
     technologies: ["Expo", "React Native", "Firebase", "RevenueCat", "PostHog"],
   },
   {

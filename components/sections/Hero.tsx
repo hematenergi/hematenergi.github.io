@@ -51,8 +51,8 @@ export default function Hero() {
               I ship{" "}
               <span className="font-semibold text-foreground">React Native</span> and{" "}
               <span className="font-semibold text-foreground">Expo</span> apps to
-              production — a commerce app with 100K+ monthly users, an AI companion
-              app on the App Store, and{" "}
+              production — a health-commerce consumer app, an AI companion app on the
+              App Store, and{" "}
               <span className="font-semibold text-foreground">
                 open-source tooling for AI coding agents.
               </span>
