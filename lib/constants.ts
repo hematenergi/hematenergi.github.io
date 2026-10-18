@@ -130,7 +130,7 @@ export const CASE_STUDIES = [
     description:
       "Consumer app for a health-commerce brand: authentication, push messaging, barcode scanning, real-time updates, analytics and crash reporting.",
     tags: ["React Native", "Expo Modules", "Firebase", "PostHog", "Sentry", "Redux Toolkit"],
-    year: "2021-2026",
+    year: "2022-2026",
     features: [
       "React Navigation stack/tab navigation",
       "Firebase Auth + Firebase Messaging",
@@ -187,7 +187,7 @@ export const EXPERIENCE = [
   {
     company: "AIMI Group (Flimty)",
     role: "Mobile & Web Engineer (In-house)",
-    period: "2021 - Present",
+    period: "Feb 2022 - Present",
     location: "Remote",
     description:
       "Build and maintain the Flimty consumer app and six internal products: field-sales app, POS & stock PWA, CRM and affiliate dashboards, LMS and a Next.js customer portal.",

@@ -25,7 +25,7 @@ export default function About() {
               <li className="flex items-start gap-3">
                 <span className="font-bold flex-shrink-0 text-primary">AIMI</span>
                 <span>
-                  In-house engineer for Flimty since 2021: the consumer app, POS and
+                  In-house engineer for Flimty since 2022: the consumer app, POS and
                   stock PWA, field-sales app, CRM, LMS and customer portal.
                 </span>
               </li>
