@@ -199,7 +199,7 @@ export const EXPERIENCE = [
     period: "Dec 2025 - Apr 2026",
     location: "Remote · Contract",
     description:
-      "Shipped Buddy: Virtual Pet Chat to the App Store as part of a two-person team (9 App Store releases in about seven weeks): onboarding v2, streaks, notification settings, widget and analytics.",
+      "Shipped Buddy: Virtual Pet Chat to the App Store as part of a two-person team (9 App Store releases in about seven weeks): onboarding v2, streaks, notification settings, widget and analytics. Owned releases from development to the App Store: prepared 6 of the 9 releases and submitted 3.",
     technologies: ["Expo", "React Native", "Firebase", "PostHog", "TypeScript"],
   },
   {

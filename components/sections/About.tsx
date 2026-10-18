@@ -34,7 +34,8 @@ export default function About() {
                 <span>
                   Contract (Dec 2025 – Apr 2026). Shipped an AI companion app to the
                   App Store; built the onboarding funnel, streaks, notification
-                  settings and analytics.
+                  settings and analytics, and took releases from development to
+                  the App Store.
                 </span>
               </li>
               <li className="flex items-start gap-3">
