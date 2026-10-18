@@ -33,8 +33,8 @@ export default function About() {
                 <span className="font-bold flex-shrink-0 text-primary">Buddy</span>
                 <span>
                   Contract (Dec 2025 – Apr 2026). Shipped an AI companion app to the
-                  App Store with onboarding, paywalls, subscriptions, notifications
-                  and widgets.
+                  App Store; built the onboarding funnel, streaks, notification
+                  settings and analytics.
                 </span>
               </li>
               <li className="flex items-start gap-3">

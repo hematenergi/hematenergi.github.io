@@ -41,7 +41,7 @@ export const HIGHLIGHTS = [
   {
     title: "Buddy — AI Companion App",
     description:
-      "AI companion mobile app built with React Native + Expo, Firebase (Auth/Firestore/Messaging), notifications, and subscription/paywall tooling.",
+      "AI companion app built with React Native + Expo and Firebase. I built the onboarding funnel, streaks, notification settings and PostHog analytics.",
     icon: "MessageCircle",
   },
   {
@@ -71,8 +71,8 @@ export const CASE_STUDIES = [
     title: "Buddy — AI Companion App",
     category: "Mobile / AI",
     description:
-      "AI companion app built with React Native + Expo, Firebase (Auth/Firestore/Messaging), notifications, and subscription/paywall tooling.",
-    tags: ["React Native", "Expo", "Firebase", "OpenAI", "Notifee", "RevenueCat", "Superwall"],
+      "AI companion app built with React Native + Expo and Firebase: onboarding funnel with paywall routing, streaks, notification settings and analytics.",
+    tags: ["React Native", "Expo", "Firebase", "Notifee", "PostHog", "Maestro"],
     year: "2025-2026",
     features: [
       "Expo Router app structure with modular screens",
@@ -80,7 +80,7 @@ export const CASE_STUDIES = [
       "Multi-bubble assistant rendering (delimiter-based message splitting)",
       "Notifications settings with local scheduling + streak reminders",
       "Firebase Auth + Firestore persistence, plus FCM token + preferences sync",
-      "Subscription/paywall dependencies: RevenueCat + Superwall",
+      "Onboarding V2: in-funnel chat, mood-based personalization, animated streak step and strict paywall routing",
     ],
     challenges: [
       "Coordinating notification permissions, local schedules, and remote token sync",
@@ -199,8 +199,8 @@ export const EXPERIENCE = [
     period: "Dec 2025 - Apr 2026",
     location: "Remote · Contract",
     description:
-      "Shipped Buddy: Virtual Pet Chat to the App Store as part of a two-person team (9 App Store releases in about seven weeks): onboarding v2, paywalls and subscriptions, notifications, streaks and widgets.",
-    technologies: ["Expo", "React Native", "Firebase", "RevenueCat", "PostHog"],
+      "Shipped Buddy: Virtual Pet Chat to the App Store as part of a two-person team (9 App Store releases in about seven weeks): onboarding v2, streaks, notification settings, widget and analytics.",
+    technologies: ["Expo", "React Native", "Firebase", "PostHog", "TypeScript"],
   },
   {
     company: "ZiroDelta",
