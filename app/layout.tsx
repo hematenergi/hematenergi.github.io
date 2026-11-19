@@ -23,11 +23,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://hematenergi.github.io"),
   title: {
-    default: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
+    default: "Dany Arkham — moved to danyarkham.is-a.dev",
     template: "%s | Dany Arkham",
   },
   description:
-    "Frontend & mobile engineer in Indonesia. I build web and mobile apps on one React + TypeScript stack: Solana dApps and wallet flows, real-time trading dashboards, and App Store apps.",
+    "This site has moved. Dany Arkham now lives at danyarkham.is-a.dev.",
   keywords: [
     "Dany Arkham",
     "Dany Arkham Developer",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://hematenergi.github.io/",
-    title: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
+    title: "Dany Arkham — moved to danyarkham.is-a.dev",
     description:
-      "Frontend & mobile engineer in Indonesia. I build web and mobile apps on one React + TypeScript stack: Solana dApps and wallet flows, real-time trading dashboards, and App Store apps.",
+      "This site has moved. Dany Arkham now lives at danyarkham.is-a.dev.",
     siteName: "Dany Arkham Portfolio",
     images: [
       {
@@ -72,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dany Arkham — Front-End, Mobile & Web3 Engineer",
+    title: "Dany Arkham — moved to danyarkham.is-a.dev",
     description:
-      "Frontend & mobile engineer in Indonesia. I build web and mobile apps on one React + TypeScript stack: Solana dApps and wallet flows, real-time trading dashboards, and App Store apps.",
+      "This site has moved. Dany Arkham now lives at danyarkham.is-a.dev.",
     images: ["/og-image.png"],
     creator: "@hematenergi",
   },
