@@ -1,30 +1,18 @@
-import Navbar from "@/components/layout/navbar-new"
-import Footer from "@/components/layout/Footer"
-import Hero from "@/components/sections/Hero"
-import About from "@/components/sections/About"
-import Stack from "@/components/sections/Stack"
-import Expertise from "@/components/sections/Expertise"
-import Highlights from "@/components/sections/Highlights"
-import Experience from "@/components/sections/Experience"
-import CaseStudies from "@/components/sections/CaseStudies"
-import WhyWorkWithMe from "@/components/sections/WhyWorkWithMe"
-import Contact from "@/components/sections/Contact"
-
 export default function Page() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main className="max-w-7xl mx-auto px-6">
-        <Hero />
-        <About />
-        <Stack />
-        <Expertise />
-        <Highlights />
-        <Experience />
-        <CaseStudies />
-        <WhyWorkWithMe />
-        <Contact />
-        <Footer />
+    <div className="min-h-screen flex items-center justify-center px-6">
+      <main className="max-w-xl text-center">
+        <h1 className="text-3xl font-semibold mb-4">This site has moved.</h1>
+        <p className="mb-8 opacity-80">
+          Dany Arkham now lives at danyarkham.is-a.dev. This old address is kept
+          online only so nobody hits a dead end.
+        </p>
+        <a
+          href="https://danyarkham.is-a.dev"
+          className="inline-block px-6 py-3 rounded-full border font-medium"
+        >
+          Go to danyarkham.is-a.dev
+        </a>
       </main>
     </div>
   )
