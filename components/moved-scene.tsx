@@ -7,8 +7,8 @@ const VOID = "#0a0a0a"
 const BONE = "#ece7dc"
 const DIM = "#8a867d"
 const SIGNAL = "#c9ff3b"
-const SERIF = '"Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif'
-const MONO = '"JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace'
+const SERIF = 'var(--font-scene-serif), "Instrument Serif", "Iowan Old Style", Georgia, serif'
+const MONO = 'var(--font-scene-mono), "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace'
 const OUT = [0.16, 1, 0.3, 1] as const
 
 type Particle = {
@@ -29,10 +29,12 @@ type Particle = {
 function Field({
   linkRef,
   pullRef,
+  kickRef,
   reduced,
 }: {
   linkRef: React.RefObject<HTMLAnchorElement | null>
   pullRef: React.MutableRefObject<number>
+  kickRef: React.MutableRefObject<{ x: number; y: number } | null>
   reduced: boolean
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -49,6 +51,7 @@ function Field({
     let raf = 0
     let last = 0
     let pull = 0 // eased value following pullRef
+    let flare = 0 // brief brightening after a kick, decays to 0
     const rnd = (a: number, b: number) => a + Math.random() * (b - a)
 
     const seed = () => {
@@ -82,7 +85,7 @@ function Field({
       ctx.fillStyle = BONE
       for (const p of particles) {
         const tw = reduced ? 1 : 0.75 + 0.25 * Math.sin(t * 0.0008 + p.ph)
-        ctx.globalAlpha = p.a * tw
+        ctx.globalAlpha = Math.min(1, p.a * tw * (1 + flare * 1.6))
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fill()
@@ -96,6 +99,25 @@ function Field({
       last = now
 
       pull += (pullRef.current - pull) * Math.min(1, dt * 3)
+      flare = Math.max(0, flare - dt * 0.8)
+
+      // metamorphosis shockwave: dust near the name is thrown outward
+      const kick = kickRef.current
+      if (kick) {
+        kickRef.current = null
+        flare = 1
+        const kr = 280
+        for (const p of particles) {
+          const kx = p.x - kick.x
+          const ky = p.y - kick.y
+          const kd = Math.hypot(kx, ky) || 1
+          if (kd < kr) {
+            const f = (1 - kd / kr) * 140
+            p.vx += (kx / kd) * f
+            p.vy += (ky / kd) * f
+          }
+        }
+      }
 
       const box = linkRef.current?.getBoundingClientRect()
       const cx = box ? box.left + box.width / 2 : w / 2
@@ -163,7 +185,7 @@ function Field({
       window.removeEventListener("resize", resize)
       document.removeEventListener("visibilitychange", onVisibility)
     }
-  }, [linkRef, pullRef, reduced])
+  }, [linkRef, pullRef, kickRef, reduced])
 
   return (
     <canvas
@@ -174,11 +196,157 @@ function Field({
   )
 }
 
-export default function MovedScene() {
+const FROM = "hematenergi"
+const TO = "Dany Arkham"
+const GLYPHS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#%&*+=/<>"
+const DURATION = 1.35 // seconds, whole metamorphosis
+const SWAP_MS = 46 // glyph reshuffle cadence
+
+type Cell = { ch: string; hot: boolean }
+
+/**
+ * The name "hematenergi" decays into signal-green static, then resolves
+ * letter by letter (left to right) into "Dany Arkham". One way: once done it
+ * stays done. Both names are 11 characters; the slot width is eased from the
+ * old name's width to the new one so the rest of the sentence glides rather
+ * than jumps. Idle state carries a very slow shimmer under the name.
+ */
+function NameSwap({
+  triggered,
+  onBurst,
+}: {
+  triggered: boolean
+  onBurst: (x: number, y: number) => void
+}) {
+  const [phase, setPhase] = useState<"idle" | "running" | "done">("idle")
+  const [cells, setCells] = useState<Cell[]>([])
+  const wrapRef = useRef<HTMLSpanElement>(null)
+  const fromRef = useRef<HTMLSpanElement>(null)
+  const toRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    if (!triggered) return
+    const wrap = wrapRef.current
+    const gFrom = fromRef.current
+    const gTo = toRef.current
+    if (!wrap || !gFrom || !gTo) return
+
+    const from = gFrom.getBoundingClientRect().width
+    const to = gTo.getBoundingClientRect().width
+    const box = wrap.getBoundingClientRect()
+    onBurst(box.left + box.width / 2, box.top + box.height / 2)
+
+    wrap.style.width = `${from}px`
+    setPhase("running")
+
+    const rnd = () => GLYPHS[Math.floor(Math.random() * GLYPHS.length)]
+    const t0 = performance.now()
+    let lastSwap = 0
+    let raf = 0
+
+    const tick = (now: number) => {
+      const t = (now - t0) / 1000
+      const wp = Math.min(1, t / (DURATION * 0.8))
+      wrap.style.width = `${from + (to - from) * (1 - Math.pow(1 - wp, 3))}px`
+
+      if (t >= DURATION) {
+        wrap.style.width = ""
+        setPhase("done")
+        return
+      }
+      if (now - lastSwap >= SWAP_MS) {
+        lastSwap = now
+        setCells(
+          Array.from({ length: TO.length }, (_, i) => {
+            const resolveAt = 0.32 + (i / (TO.length - 1)) * 0.72
+            if (t < 0.18) {
+              // first the old name flickers
+              return { ch: Math.random() < 0.35 ? rnd() : FROM[i], hot: true }
+            }
+            if (t < resolveAt) return { ch: rnd(), hot: true }
+            return { ch: TO[i], hot: t < resolveAt + 0.2 }
+          }),
+        )
+      }
+      raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [triggered])
+
+  const ghost =
+    "pointer-events-none invisible absolute left-0 top-0 whitespace-nowrap"
+
+  return (
+    <span
+      ref={wrapRef}
+      className="relative inline-block whitespace-nowrap align-baseline"
+      style={{ textAlign: "left" }}
+    >
+      {phase === "idle" && (
+        <>
+          {FROM}
+          {/* barely-there cue that the name can be touched */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 -bottom-[3px] h-px"
+            style={{ background: "rgba(138,134,125,0.28)" }}
+          />
+          <motion.span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 -bottom-[3px] h-px"
+            style={{
+              backgroundImage: `linear-gradient(90deg, transparent 0%, ${SIGNAL} 50%, transparent 100%)`,
+              backgroundSize: "40% 100%",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.55,
+            }}
+            initial={{ backgroundPositionX: "-60%" }}
+            animate={{ backgroundPositionX: ["-60%", "160%"] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", repeatDelay: 1.5, delay: 4.5 }}
+          />
+        </>
+      )}
+      {phase === "running" && (
+        <>
+          <span className="sr-only">{TO}</span>
+          <span aria-hidden="true">
+            {cells.map((c, i) => (
+              <span
+                key={i}
+                className="inline-block"
+                style={{
+                  color: c.hot ? SIGNAL : "inherit",
+                  textShadow: c.hot ? "0 0 10px rgba(201,255,59,0.55)" : "none",
+                  transition: "color 0.35s ease-out, text-shadow 0.35s ease-out",
+                  minWidth: TO[i] === " " ? "0.25em" : undefined,
+                }}
+              >
+                {c.ch === " " ? " " : c.ch}
+              </span>
+            ))}
+          </span>
+        </>
+      )}
+      {phase === "done" && TO}
+      <span ref={fromRef} aria-hidden="true" className={ghost}>
+        {FROM}
+      </span>
+      <span ref={toRef} aria-hidden="true" className={ghost}>
+        {TO}
+      </span>
+    </span>
+  )
+}
+
+export default function MovedScene({ fontClassName = "" }: { fontClassName?: string }) {
   // null until the media query has been read on the client
   const [reduced, setReduced] = useState<boolean | null>(null)
   const linkRef = useRef<HTMLAnchorElement>(null)
   const pullRef = useRef(0.3)
+  const kickRef = useRef<{ x: number; y: number } | null>(null)
+  const [triggered, setTriggered] = useState(false)
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -210,13 +378,14 @@ export default function MovedScene() {
 
   const hot = () => (pullRef.current = 1)
   const calm = () => (pullRef.current = 0.3)
+  const burst = (x: number, y: number) => (kickRef.current = { x, y })
 
   return (
     <div
-      className="relative flex h-[100svh] w-full items-center justify-center overflow-hidden px-6"
+      className={`${fontClassName} relative flex h-[100svh] w-full items-center justify-center overflow-hidden px-6`}
       style={{ background: VOID, color: BONE, fontFamily: SERIF }}
     >
-      <Field linkRef={linkRef} pullRef={pullRef} reduced={still} />
+      <Field linkRef={linkRef} pullRef={pullRef} kickRef={kickRef} reduced={still} />
 
       <motion.main
         initial="hidden"
@@ -243,8 +412,24 @@ export default function MovedScene() {
           variants={rise(2.3)}
           className="mt-6 max-w-[34rem] text-[clamp(1.2rem,3.6vw,1.6rem)] leading-[1.25]"
           style={{ color: DIM }}
+          onPointerEnter={(e) => {
+            if (e.pointerType !== "touch") setTriggered(true)
+          }}
+          onClick={() => setTriggered(true)}
         >
-          Dany Arkham now lives at{" "}
+          {/* server render and no-JS keep the plain sentence in one text node */}
+          {ready ? (
+            still ? (
+              "Dany Arkham now lives at "
+            ) : (
+              <>
+                <NameSwap triggered={triggered} onBurst={burst} />
+                {" now lives at "}
+              </>
+            )
+          ) : (
+            "hematenergi now lives at "
+          )}
           <span className="whitespace-nowrap">danyarkham.is-a.dev</span>. This
           old address is kept online only so nobody hits a dead end.
         </motion.p>
