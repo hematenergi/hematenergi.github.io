@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://hematenergi.github.io"),
   title: {
-    default: "Dany Arkham — moved to danyarkham.is-a.dev",
+    default: "Dany Arkham · moved to danyarkham.is-a.dev",
     template: "%s | Dany Arkham",
   },
   description:
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://hematenergi.github.io/",
-    title: "Dany Arkham — moved to danyarkham.is-a.dev",
+    title: "Dany Arkham · moved to danyarkham.is-a.dev",
     description:
       "This site has moved. Dany Arkham now lives at danyarkham.is-a.dev.",
     siteName: "Dany Arkham Portfolio",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dany Arkham — moved to danyarkham.is-a.dev",
+    title: "Dany Arkham · moved to danyarkham.is-a.dev",
     description:
       "This site has moved. Dany Arkham now lives at danyarkham.is-a.dev.",
     images: ["/og-image.png"],
