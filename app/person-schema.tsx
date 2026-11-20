@@ -8,8 +8,7 @@ export function PersonSchema() {
     alternateName: [PERSONAL_INFO.alias, "Dany Arkham", "hematenergi"],
     jobTitle: "Frontend & Mobile Engineer",
     description: PERSONAL_INFO.bio,
-    url: "https://hematenergi.github.io",
-    image: "https://hematenergi.github.io/og-image.png",
+    url: "https://danyarkham.is-a.dev/",
     sameAs: [PERSONAL_INFO.github, PERSONAL_INFO.linkedin],
     email: PERSONAL_INFO.email,
     address: {
@@ -45,7 +44,7 @@ export function PersonSchema() {
     ],
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://hematenergi.github.io",
+      "@id": "https://danyarkham.is-a.dev/#person",
     },
   }
 

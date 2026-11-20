@@ -51,12 +51,12 @@ export const metadata: Metadata = {
   creator: "Dany Arkham",
   publisher: "Dany Arkham",
   alternates: {
-    canonical: "https://hematenergi.github.io",
+    canonical: "https://danyarkham.is-a.dev/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hematenergi.github.io/",
+    url: "https://danyarkham.is-a.dev/",
     title: "Dany Arkham · moved to danyarkham.is-a.dev",
     description:
       "This site has moved. Dany Arkham now lives at danyarkham.is-a.dev.",
@@ -79,10 +79,10 @@ export const metadata: Metadata = {
     creator: "@hematenergi",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
     googleBot: {
-      index: true,
+      index: false,
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
@@ -103,7 +103,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <PersonSchema />
-        <link rel="canonical" href="https://hematenergi.github.io" />
+        <link rel="canonical" href="https://danyarkham.is-a.dev/" />
+        <meta httpEquiv="refresh" content="0; url=https://danyarkham.is-a.dev/" />
       </head>
       <body className={inter.className}>
         {children}
